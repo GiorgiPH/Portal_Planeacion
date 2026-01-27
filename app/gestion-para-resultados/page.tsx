@@ -2,8 +2,9 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { BreadcrumbNav } from "@/components/breadcrumb-nav"
 import { NormativeLink } from "@/components/normative-link"
-import { Target, DollarSign, BarChart3 } from "lucide-react"
+import { Target, DollarSign, BarChart3, ArrowBigDownDashIcon } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Arrow } from "@radix-ui/react-context-menu"
 
 export default function GestionParaResultadosPage() {
   return (
@@ -104,6 +105,31 @@ export default function GestionParaResultadosPage() {
                     <div className="text-center">
                       <Target className="mx-auto mb-4 h-16 w-16 text-primary" />
                       <p className="text-sm text-muted-foreground">Diagrama del Ciclo Presupuestario</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </section>
+            {/* Budget Cycle */}
+            <section>
+              <h2 className="mb-6 text-2xl font-semibold">Presupuesto Ciudadano</h2>
+              <Card>
+                <CardContent className="pt-6">
+                  <p className="mb-6 text-sm leading-relaxed text-muted-foreground">
+                    El Presupuesto Ciudadano es una versión clara y sencilla del presupuesto público que explica de dónde viene el dinero del gobierno y en qué se gasta.
+                    Su objetivo es que la población entienda las prioridades del gasto, pueda vigilar el uso de los recursos y participe de forma informada en los asuntos públicos.
+                  </p>
+                  <div className="flex items-center justify-center rounded-lg bg-muted/50 p-8">
+                    <div className="text-center">
+                      <a
+                        href="https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Informaci%C3%B3n%20especifica%20de%20Transparencia/Indice%20de%20Transparencia%20y%20Disponibilidad%20de%20la%20Informaci%C3%B3n%20Fiscal%20-%20ITDIF/IV.%20RENDICION%20DE%20CUENTAS/Presupuesto%20Ciudadano"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ArrowBigDownDashIcon className="mx-auto mb-4 h-16 w-16 text-primary" />
+                      </a>
+
+                      <p className="text-sm text-muted-foreground">Documento de Presupuesto Ciudadano</p>
                     </div>
                   </div>
                 </CardContent>
