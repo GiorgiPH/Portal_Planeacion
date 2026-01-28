@@ -16,15 +16,15 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: `${BASE_PATH}/icon-light-32x32.png`,
+        url: `${BASE_PATH}/favicon.ico`,
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: `${BASE_PATH}/icon-dark-32x32.png`,
+        url: `${BASE_PATH}/favicon.ico`,
         media: "(prefers-color-scheme: dark)",
       },
       {
-        url: `${BASE_PATH}/icon.svg`,
+        url: `${BASE_PATH}/favicon.ico`,
         type: "image/svg+xml",
       },
     ],
