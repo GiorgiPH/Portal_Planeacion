@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
 const purposes = [
-  "I. Coordinar la implementación del Sistema de Evaluación del Desempeño",
+  "I. Cooordinar la implementación del Sistema de Evaluación del Desempeño",
   "II. Establecer los lineamientos para el seguimiento de programas y proyectos",
   "III. Emitir disposiciones para el Sistema de Evaluación del Desempeño",
   "IV. Aprobar el Programa Anual de Evaluación",
