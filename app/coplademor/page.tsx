@@ -7,7 +7,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 
 const navigationCards = [
   {
-    title: "PED 2025-2026",
+    title: "PED 2025-2030",
     icon: FileText,
     href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Plan%20Estatal%20de%20Desarrollo",
   },
@@ -38,7 +38,7 @@ const navigationCards = [
   },
 ]
 
-const municipalities = [
+/*const municipalities = [
   { name: "Cuernavaca", href: "https://cuernavaca.gob.mx/?p=9958" },
   { name: "Cuautla", href: "https://cuautla.gob.mx/wp-content/uploads/2025/06/01.-PMD-2025-2027_FINAL.pdf" },
   { name: "Emiliano Zapata", href: "https://zapatamorelos.gob.mx/plan-de-desarrollo-urbano/" },
@@ -47,7 +47,7 @@ const municipalities = [
     name: "Tepoztlán",
     href: "http://marcojuridico.morelos.gob.mx/archivos/reglamentos_municipales/pdf/PLANMUNITEPOZMORE.pdf",
   },
-]
+] */
 
 export default function CoplademorPage() {
   return (
@@ -107,6 +107,7 @@ export default function CoplademorPage() {
               </div>
             </section>
 
+            {/*}
             <section>
               <h2 className="mb-6 text-2xl font-semibold">Planes Municipales de Desarrollo</h2>
               <Card>
@@ -129,6 +130,7 @@ export default function CoplademorPage() {
                 </CardContent>
               </Card>
             </section>
+            */}
           </div>
         </div>
       </main>
