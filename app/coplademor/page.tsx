@@ -15,7 +15,7 @@ const navigationCards = [
   {
     title: "Programas Derivados del PED 2025-2030",
     icon: BookOpen,
-    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Planeaci%C3%B3n%20Estrat%C3%A9gica/II.%20PROGRAMAS%20DERIVADOS%20DEL%20PLAN%20ESTATAL%20DE%20DESARROLLO%202019-2024",
+    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Planeaci%C3%B3n%20Estrat%C3%A9gica/II.%20PROGRAMAS%20DERIVADOS%20DEL%20PLAN%20ESTATAL%20DE%20DESARROLLO",
   },
   {
     title: "Planes Municipales de Desarrollo",

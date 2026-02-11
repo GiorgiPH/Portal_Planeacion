@@ -30,11 +30,11 @@ const cycleSteps = [
 
 const navigationCards = [
   {
-    title: "Localidades de Atención Prioritaria 2025",
+    title: "Informes Presupuesto Paticipativo",
     icon: MapPin,
     href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Planeaci%C3%B3n%20Estrat%C3%A9gica/VIII.%20INFORME%20PRESUPUESTO%20PARTICIPATIVO",
   },
-  {
+  /*{
     title: "Localidades Beneficiadas 2025",
     icon: CheckCircle,
     href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Planeaci%C3%B3n%20Estrat%C3%A9gica/VIII.%20INFORME%20PRESUPUESTO%20PARTICIPATIVO",
@@ -48,7 +48,7 @@ const navigationCards = [
     title: "Fotogalería",
     icon: Camera,
     href: "#",
-  },
+  },*/
 ]
 
 export default function PresupuestoParticipativoPage() {
@@ -80,7 +80,7 @@ export default function PresupuestoParticipativoPage() {
                 {cycleSteps.map((step) => (
                   <Card key={step.number} className="relative overflow-hidden">
                     <CardHeader>
-                      <div className="absolute -right-4 -top-4 text-8xl font-bold text-primary/5">{step.number}</div>
+                      <div className="absolute -right-4 -top-4 text-8xl font-bold text-primary/30">{step.number}</div>
                       <div className="relative mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
                         <step.icon className="h-6 w-6" />
                       </div>
@@ -108,7 +108,7 @@ export default function PresupuestoParticipativoPage() {
                   href="http://marcojuridico.morelos.gob.mx/archivos/reglamentos_estatales/pdf/RLEYPRESUP ARTICIPATIVO.pdf"
                 />
                 <NormativeLink
-                  title="Reglamento de Asambleas en materia de Presupuesto Participativo del Instituto Morelense"
+                  title="Reglamento de Asambleas en materia de Presupuesto Participativo del Instituto Morelense de Procesos Electorales y Participación Ciudadana"
                   href="https://impepac.mx/wp-content/uploads/2015/09/Ley-de-Participaci%C3%B3n-CiudadanaV2.pdf"
                 />
                 <NormativeLink
