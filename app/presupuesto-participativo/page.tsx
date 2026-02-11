@@ -2,7 +2,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { BreadcrumbNav } from "@/components/breadcrumb-nav"
 import { NormativeLink } from "@/components/normative-link"
-import { Radio, CheckCircle, Play, BarChart, MapPin, Users, Camera } from "lucide-react"
+import { Radio, CheckCircle, Play, BarChart, MapPin, Users, Camera, ArrowRight } from "lucide-react"
 import { Card, CardHeader, CardTitle } from "@/components/ui/card"
 
 const cycleSteps = [
@@ -76,18 +76,28 @@ export default function PresupuestoParticipativoPage() {
             {/* Cycle */}
             <section>
               <h2 className="mb-6 text-2xl font-semibold">Ciclo del Presupuesto Participativo</h2>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                {cycleSteps.map((step) => (
-                  <Card key={step.number} className="relative overflow-hidden">
-                    <CardHeader>
-                      <div className="absolute -right-4 -top-4 text-8xl font-bold text-primary/30">{step.number}</div>
-                      <div className="relative mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                        <step.icon className="h-6 w-6" />
+              <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-1">
+                {cycleSteps.map((step, index) => (
+                  <div key={step.number} className="flex items-center">
+                    <Card className="relative overflow-hidden w-44">
+                      <CardHeader>
+                        <div className="absolute right-2 top-2 text-8xl font-bold text-primary/30">{step.number}</div>
+                        <div className="relative mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                          <step.icon className="h-6 w-6" />
+                        </div>
+                        <CardTitle className="text-sm leading-relaxed text-balance">{step.title}</CardTitle>
+                      </CardHeader>
+                    </Card>
+                    {index < cycleSteps.length - 1 && (
+                      <div className="flex items-center justify-center px-2 sm:px-1">
+                        <ArrowRight className="h-6 w-6 text-primary flex-shrink-0" />
                       </div>
-                      <CardTitle className="text-sm leading-relaxed text-balance">{step.title}</CardTitle>
-                    </CardHeader>
-                  </Card>
+                    )}
+                  </div>
                 ))}
+                <div className="flex items-center justify-center px-2 sm:px-1">
+                  <ArrowRight className="h-6 w-6 text-primary flex-shrink-0" />
+                </div>
               </div>
             </section>
 
