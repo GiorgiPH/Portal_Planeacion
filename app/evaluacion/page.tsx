@@ -25,12 +25,12 @@ const navigationCards = [
   {
     title: "Resultados de Evaluaciones",
     icon: Target,
-    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/III.%20PROGRAMA%20ANUAL%20DE%20EVALUACIONES&editing=false&openfile=true",
+    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/VII.%20EVALUACIONES%20A%20PROGRAMAS%20PRESUPUESTARIOS",
   },
   {
     title: "Difusión de Evaluaciones (Formato CONAC)",
     icon: ExternalLink,
-    href: "#",
+    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/V.%20EVALUACIONES%20DE%20DESEMPE%C3%91O",
   },
   {
     title: "Aspectos Susceptibles de Mejora",
@@ -40,7 +40,7 @@ const navigationCards = [
   {
     title: "Términos de Referencia",
     icon: FileText,
-    href: "#",
+    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/T%C3%A9rminos%20de%20Referencia",
   },
 ]
 

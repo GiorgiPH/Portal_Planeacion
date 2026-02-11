@@ -23,7 +23,7 @@ const otherCards = [
   {
     title: "Informes de Gobierno",
     icon: FileText,
-    href: "#",
+    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Planeaci%C3%B3n%20Estrat%C3%A9gica/III.%20INFORMES%20DE%20GOBIERNO%20Y%20ANEXOS%20ESTADISTICOS",
   },
   {
     title: "Secretaría de la Contraloría",
