@@ -18,15 +18,15 @@ const navigationCards = [
     href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/VII.%20EVALUACIONES%20A%20PROGRAMAS%20PRESUPUESTARIOS",
   },
   {
-    title: "Reporte del SRFT (Módulo Indicadores) 2025",
+    title: "Reporte del Sistema de Recursos Federales Transferidos (SRFT - Módulo Indicadores)",
     icon: Database,
-    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/VII.%20EVALUACIONES%20A%20PROGRAMAS%20PRESUPUESTARIOS",
+    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Informaci%C3%B3n%20especifica%20de%20Transparencia/Informes%20Trimestrales%2C%20Reportados%20en%20el%20Sistema%20de%20Recursos%20Federales%20Transferidos%20%28SRFT%29",
   },
-  {
+  /*{
     title: "Reporte del SRFT (Módulo Indicadores) Histórico",
     icon: Clock,
     href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/VII.%20EVALUACIONES%20A%20PROGRAMAS%20PRESUPUESTARIOS",
-  },
+  },*/
 ]
 
 export default function SeguimientoPage() {
@@ -81,9 +81,9 @@ export default function SeguimientoPage() {
             {/* Reports */}
             <section>
               <h2 className="mb-6 text-2xl font-semibold">Reportes y Documentos</h2>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 justify-items-center max-w-5xl mx-auto">
                 {navigationCards.map((card) => (
-                  <a key={card.title} href={card.href} target="_blank" rel="noopener noreferrer" className="group">
+                  <a key={card.title} href={card.href} target="_blank" rel="noopener noreferrer" className="group w-full">
                     <Card className="h-full cursor-pointer transition-all hover:shadow-lg hover:border-primary/50">
                       <CardHeader>
                         <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">

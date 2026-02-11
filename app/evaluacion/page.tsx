@@ -3,11 +3,18 @@ import { Footer } from "@/components/footer"
 import { BreadcrumbNav } from "@/components/breadcrumb-nav"
 import { NormativeLink } from "@/components/normative-link"
 import { CicloPresupuestario } from "@/components/ciclo-presupuestario"
-import { Calendar, FileText, ExternalLink, Target, AlertCircle } from "lucide-react"
+import { Calendar, FileText, ExternalLink, Target, AlertCircle, CheckCircle } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
-const evaluationTypes = ["Diseño", "Procesos", "Resultados", "Impacto", "Indicadores", "Estratégicas"]
+const evaluationTypes = [
+  { name: "Diseño", description: "Análisis inicial de la estructura del programa" },
+  { name: "Procesos", description: "Evaluación de la implementación operativa" },
+  { name: "Resultados", description: "Medición de los logros obtenidos" },
+  { name: "Impacto", description: "Análisis del cambio generado a largo plazo" },
+  { name: "Indicadores", description: "Seguimiento de variables clave" },
+  { name: "Estratégicas", description: "Evaluación de orientación y pertinencia" },
+]
 
 const navigationCards = [
   {
@@ -89,18 +96,32 @@ export default function EvaluacionPage() {
 
             {/* Evaluation Types */}
             <section>
-              <h2 className="mb-6 text-2xl font-semibold">Tipos de Evaluación</h2>
-              <Card>
-                <CardContent className="pt-6">
-                  <div className="flex flex-wrap gap-3">
-                    {evaluationTypes.map((type) => (
-                      <Badge key={type} variant="secondary" className="px-4 py-2 text-sm font-medium">
-                        {type}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+              <h2 className="mb-8 text-2xl font-semibold">Tipos de Evaluación</h2>
+              <div className="relative">
+                <div className="flex items-start justify-between gap-2 overflow-x-auto pb-4">
+                  {evaluationTypes.map((type, index) => (
+                    <div key={type.name} className="flex flex-col items-center flex-shrink-0" style={{ width: "160px" }}>
+                      {/* Timeline dot */}
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground flex-shrink-0 z-10 relative">
+                        <span className="text-sm font-bold">{index + 1}</span>
+                      </div>
+
+                      {/* Content card */}
+                      <Card className="mt-4 w-full transition-all hover:shadow-md hover:border-primary/50">
+                        <CardHeader className="pb-2">
+                          <CardTitle className="text-sm text-center">{type.name}</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-xs text-muted-foreground text-center">{type.description}</p>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Horizontal connecting line */}
+                <div className="absolute top-5 left-0 right-0 h-1 bg-primary/20 -z-10" style={{ height: "2px" }}></div>
+              </div>
             </section>
 
             {/* Navigation Cards */}
