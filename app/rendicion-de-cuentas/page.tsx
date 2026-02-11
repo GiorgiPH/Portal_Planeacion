@@ -26,7 +26,7 @@ const otherCards = [
     href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Planeaci%C3%B3n%20Estrat%C3%A9gica/III.%20INFORMES%20DE%20GOBIERNO%20Y%20ANEXOS%20ESTADISTICOS",
   },
   {
-    title: "Secretaría de la Contraloría",
+    title: "Secretaría de Anticorrupción y Buen Gobierno",
     icon: ShieldCheck,
     href: "https://www.morelos.gob.mx/inicio/secretaria-de-la-contraloria",
   },

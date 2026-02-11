@@ -20,7 +20,7 @@ const members = [
   { role: "Presidente", entity: "Titular del Poder Ejecutivo" },
   { role: "Secretario Técnico", entity: "Secretaría de Administración y Finanzas" },
   { role: "Vocal", entity: "Secretaría de Bienestar a través del CONEVAL" },
-  { role: "Vocal", entity: "Secretaría de la Contraloría" },
+  { role: "Vocal", entity: "Secretaría de Anticorrupción y Buen Gobierno" },
 ]
 
 const invitees = [
@@ -35,21 +35,25 @@ const navigationCards = [
   {
     title: "Actas de Sesiones",
     icon: Scroll,
-    href: "https://www.morelos.gob.mx/ultimas-noticias/inician-trabajos-de-la-comision-coordinadora-del-sistema-de-evaluacion-del-desempeno-estatal",
+    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Comisi%C3%B3n%20Coordinadora%20del%20Sistema%20de%20Evaluaci%C3%B3n%20del%20Desempe%C3%B1o%20Estatal%20%28CCSEDE%29",
   },
-  {
+  /*{
     title: "Acuerdos",
     icon: FileText,
     href: "https://www.morelos.gob.mx/ultimas-noticias/avanza-morelos-en-la-implementacion-del-presupuesto-basado-en-resultados-y-el-sistema-de-evaluacion-del-desempeno",
-  },
-  {
+  },*/
+  /*{
     title: "Fotogalería",
     icon: Camera,
     href: "https://www.morelos.gob.mx/ultimas-noticias/aprueba-gobierno-de-morelos-programa-anual-de-trabajo-de-la-comision-del-sede-2025",
-  },
+  },*/
 ]
 
 export default function CcsedePage() {
+  const half = Math.ceil(purposes.length / 2)
+  const leftPurposes = purposes.slice(0, half)
+  const rightPurposes = purposes.slice(half)
+
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -76,16 +80,31 @@ export default function CcsedePage() {
               <h2 className="mb-6 text-2xl font-semibold">Fines de la Comisión</h2>
               <Card>
                 <CardContent className="pt-6">
-                  <ul className="space-y-3">
-                    {purposes.map((purpose, index) => (
-                      <li key={index} className="flex items-start gap-3 text-sm text-muted-foreground">
-                        <Badge variant="outline" className="shrink-0 mt-0.5">
-                          {index + 1}
-                        </Badge>
-                        <span className="leading-relaxed">{purpose}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {/* Left column - primary color badges */}
+                    <ul className="space-y-3">
+                      {leftPurposes.map((purpose, i) => (
+                        <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
+                          <Badge className="shrink-0 mt-0.5 bg-primary/10 text-primary border-transparent">
+                            {i + 1}
+                          </Badge>
+                          <span className="leading-relaxed">{purpose}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Right column - secondary color badges */}
+                    <ul className="space-y-3">
+                      {rightPurposes.map((purpose, j) => (
+                        <li key={j} className="flex items-start gap-3 text-sm text-muted-foreground">
+                          <Badge className="shrink-0 mt-0.5 bg-secondary/10 text-secondary-foreground border-transparent">
+                            {j + 1 + leftPurposes.length}
+                          </Badge>
+                          <span className="leading-relaxed">{purpose}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </CardContent>
               </Card>
             </section>
