@@ -49,7 +49,7 @@ export default function InformacionEstrategicaPage() {
                     </CardHeader>
                     <CardContent>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        Comité Estatal de Información Estadística y Geográfica de Morelos
+                        Comisión Estatal de Información Estadística y Geográfica de Morelos
                       </p>
                     </CardContent>
                   </Card>

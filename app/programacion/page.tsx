@@ -9,14 +9,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const navigationCards = [
   {
-    title: "Catálogo de PPs",
+    title: "Catálogo de Programas Presupuestarios (PPs)",
     icon: BookOpen,
-    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/VII.%20EVALUACIONES%20A%20PROGRAMAS%20PRESUPUESTARIOS/2024",
+    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Informaci%C3%B3n%20especifica%20de%20Transparencia/Indice%20de%20Transparencia%20y%20Disponibilidad%20de%20la%20Informaci%C3%B3n%20Fiscal%20-%20ITDIF/VI.%20EVALUACION%20DE%20RESULTADOS/Programas%20Presupuestarios",
   },
   {
     title: "Instrumentos metodológicos",
     icon: Tool,
-    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/VII.%20EVALUACIONES%20A%20PROGRAMAS%20PRESUPUESTARIOS/2024",
+    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/I.%20METODOLOGIAS%20%20GpR",
   },
   {
     title: "Presupuesto de Egresos",

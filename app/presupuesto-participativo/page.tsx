@@ -79,8 +79,8 @@ export default function PresupuestoParticipativoPage() {
               <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-1">
                 {cycleSteps.map((step, index) => (
                   <div key={step.number} className="flex items-center">
-                    <Card className="relative overflow-hidden w-44">
-                      <CardHeader>
+                    <Card className={`relative overflow-hidden h-48 ${index === 1 ? "w-56" : "w-44"}`}>
+                      <CardHeader className="h-full flex flex-col justify-between p-4">
                         <div className="absolute right-2 top-2 text-8xl font-bold text-primary/30">{step.number}</div>
                         <div className="relative mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
                           <step.icon className="h-6 w-6" />
@@ -95,9 +95,6 @@ export default function PresupuestoParticipativoPage() {
                     )}
                   </div>
                 ))}
-                <div className="flex items-center justify-center px-2 sm:px-1">
-                  <ArrowRight className="h-6 w-6 text-primary flex-shrink-0" />
-                </div>
               </div>
             </section>
 
