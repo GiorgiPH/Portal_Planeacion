@@ -20,7 +20,7 @@ const navigationCards = [
   {
     title: "Planes Municipales de Desarrollo",
     icon: MapPin,
-    href: "https://transparencia.morelos.gob.mx/index.php/apps/files/files/20566?dir=/Secretar%C3%ADa%20de%20Administraci%C3%B3n%20y%20Finanzas/Planeaci%C3%B3n%20Estrat%C3%A9gica/PLANES%20MUNICIPALES%20PUBLICADOS%202025-2027",
+    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Planeaci%C3%B3n%20Estrat%C3%A9gica/PLANES%20MUNICIPALES%20PUBLICADOS%202025-2027",
   },
   {
     title: "Comité de Planeación para el Desarrollo del Estado de Morelos (COPLADEMOR) Subcomités Sectoriales",
