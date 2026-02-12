@@ -2,43 +2,44 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { BreadcrumbNav } from "@/components/breadcrumb-nav"
 import { NormativeLink } from "@/components/normative-link"
+import { CicloPresupuestario } from "@/components/ciclo-presupuestario"
 import { FileText, Users, BookOpen, MapPin, Scroll, ClipboardCheck } from "lucide-react"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 
 const navigationCards = [
   {
-    title: "PED 2025-2026",
+    title: "PED 2025-2030",
     icon: FileText,
-    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Plan%20Estatal%20de%20Desarrollo",
+    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Planeaci%C3%B3n%20Estrat%C3%A9gica/I.%20PLAN%20ESTATAL%20DE%20DESARROLLO",
   },
   {
-    title: "Programas Derivados",
+    title: "Programas Derivados del PED 2025-2030",
     icon: BookOpen,
-    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Planeaci%C3%B3n%20Estrat%C3%A9gica/II.%20PROGRAMAS%20DERIVADOS%20DEL%20PLAN%20ESTATAL%20DE%20DESARROLLO%202019-2024",
+    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Planeaci%C3%B3n%20Estrat%C3%A9gica/II.%20PROGRAMAS%20DERIVADOS%20DEL%20PLAN%20ESTATAL%20DE%20DESARROLLO",
   },
   {
     title: "Planes Municipales de Desarrollo",
     icon: MapPin,
-    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Planeaci%C3%B3n%20Estrat%C3%A9gica/III.%20PLANES%20MUNICIPALES%20DE%20DESARROLLO",
+    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Planeaci%C3%B3n%20Estrat%C3%A9gica/PLANES%20MUNICIPALES%20PUBLICADOS%202025-2027",
   },
   {
-    title: "Subcomités Sectoriales",
+    title: "Comité de Planeación para el Desarrollo del Estado de Morelos (COPLADEMOR) Subcomités Sectoriales",
     icon: Users,
     href: "#",
   },
   {
-    title: "Actas de las Sesiones Plenarias COPLADEMUN",
+    title: "Actas de las Sesiones Plenarias del COPLADEMOR",
     icon: Scroll,
     href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Planeaci%C3%B3n%20Estrat%C3%A9gica/V.%20ACTAS%20DE%20SESION%20DEL%20COPLADEMOR",
   },
   {
     title: "Evaluación al PED 2025-2030",
     icon: ClipboardCheck,
-    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/V.%20EVALUACIONES%20DE%20DESEMPE%C3%91O",
+    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/IV.%20EVALUACION%20DEL%20PLAN%20ESTATAL%20DE%20DESARROLLO",
   },
 ]
 
-const municipalities = [
+/*const municipalities = [
   { name: "Cuernavaca", href: "https://cuernavaca.gob.mx/?p=9958" },
   { name: "Cuautla", href: "https://cuautla.gob.mx/wp-content/uploads/2025/06/01.-PMD-2025-2027_FINAL.pdf" },
   { name: "Emiliano Zapata", href: "https://zapatamorelos.gob.mx/plan-de-desarrollo-urbano/" },
@@ -47,7 +48,7 @@ const municipalities = [
     name: "Tepoztlán",
     href: "http://marcojuridico.morelos.gob.mx/archivos/reglamentos_municipales/pdf/PLANMUNITEPOZMORE.pdf",
   },
-]
+] */
 
 export default function CoplademorPage() {
   return (
@@ -64,13 +65,16 @@ export default function CoplademorPage() {
               <h1 className="mb-6 text-4xl font-bold tracking-tight text-balance">
                 Comité de Planeación para el Desarrollo del Estado de Morelos
               </h1>
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                Órgano del Poder Ejecutivo Estatal que se encarga de formular, actualizar, instrumentar y evaluar el
-                plan y los programas de desarrollo del estado. Su función principal es coordinar los esfuerzos de
-                planeación a nivel estatal, asegurando que los planes municipales se alineen con los estatales y
-                nacionales y fomentando la participación ciudadana en la toma de decisiones para el bienestar de la
-                población.
-              </p>
+              <div className="space-y-4">
+                <p className="text-lg leading-relaxed text-muted-foreground">
+                  Órgano del Poder Ejecutivo Estatal que se encarga de formular, actualizar, instrumentar y evaluar el
+                  plan y los programas de desarrollo del estado. Su función principal es coordinar los esfuerzos de
+                  planeación a nivel estatal, asegurando que los planes municipales se alineen con los estatales y
+                  nacionales y fomentando la participación ciudadana en la toma de decisiones para el bienestar de la
+                  población.
+                </p>
+                <CicloPresupuestario highlightStage="planeacion" />
+              </div>
             </section>
 
             {/* Normative Framework */}
@@ -107,6 +111,7 @@ export default function CoplademorPage() {
               </div>
             </section>
 
+            {/*}
             <section>
               <h2 className="mb-6 text-2xl font-semibold">Planes Municipales de Desarrollo</h2>
               <Card>
@@ -114,7 +119,7 @@ export default function CoplademorPage() {
                   <ul className="space-y-3">
                     {municipalities.map((municipality) => (
                       <li key={municipality.name}>
-                        <a
+                        
                           href={municipality.href}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -129,6 +134,7 @@ export default function CoplademorPage() {
                 </CardContent>
               </Card>
             </section>
+            */}
           </div>
         </div>
       </main>
@@ -137,3 +143,5 @@ export default function CoplademorPage() {
     </div>
   )
 }
+
+

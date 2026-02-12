@@ -91,7 +91,7 @@ export default function GestionParaResultadosPage() {
             </section>
 
             {/* Budget Cycle */}
-            <section>
+            {/*<section>
               <h2 className="mb-6 text-2xl font-semibold">Ciclo Presupuestario</h2>
               <Card>
                 <CardContent className="pt-6">
@@ -109,7 +109,7 @@ export default function GestionParaResultadosPage() {
                   </div>
                 </CardContent>
               </Card>
-            </section>
+            </section>*/}
             {/* Budget Cycle */}
             <section>
               <h2 className="mb-6 text-2xl font-semibold">Presupuesto Ciudadano</h2>

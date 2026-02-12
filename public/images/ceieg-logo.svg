@@ -1,0 +1,32 @@
+<svg viewBox="0 0 1365 560" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- CEIEG Logo and Text -->
+  <g id="ceieg-logo">
+    <!-- Left side symbol (circular design) -->
+    <g id="symbol">
+      <!-- Outer circle elements -->
+      <path d="M 360 140 Q 380 120 400 140" stroke="#B8956A" stroke-width="20" fill="none" stroke-linecap="round"/>
+      <path d="M 360 420 Q 380 440 400 420" stroke="#B8956A" stroke-width="20" fill="none" stroke-linecap="round"/>
+      
+      <!-- Inner geometric patterns -->
+      <path d="M 300 280 Q 320 240 360 240 Q 400 240 420 280" stroke="#7A8B72" stroke-width="15" fill="none"/>
+      <path d="M 300 280 Q 320 320 360 320 Q 400 320 420 280" stroke="#7A8B72" stroke-width="15" fill="none"/>
+      
+      <!-- Center plant/leaf symbol -->
+      <ellipse cx="360" cy="320" rx="40" ry="60" fill="#D4A574" opacity="0.3"/>
+      <path d="M 360 260 Q 370 290 360 340 Q 350 290 360 260" fill="#B8956A"/>
+      
+      <!-- Decorative dots -->
+      <circle cx="340" cy="300" r="6" fill="#D4A574"/>
+      <circle cx="380" cy="300" r="6" fill="#D4A574"/>
+      <circle cx="360" cy="280" r="6" fill="#D4A574"/>
+      <circle cx="360" cy="340" r="6" fill="#D4A574"/>
+    </g>
+    
+    <!-- Right side text -->
+    <text x="550" y="320" font-size="180" font-weight="bold" fill="#7A8B72" font-family="Arial, sans-serif">CEIEG</text>
+    
+    <text x="550" y="400" font-size="80" fill="#B8956A" font-family="Arial, sans-serif" font-weight="600">COMISIÓN ESTATAL DE</text>
+    <text x="550" y="470" font-size="80" fill="#B8956A" font-family="Arial, sans-serif" font-weight="600">INFORMACIÓN ESTADÍSTICA</text>
+    <text x="550" y="540" font-size="80" fill="#B8956A" font-family="Arial, sans-serif" font-weight="600">Y GEOGRÁFICA DE MORELOS</text>
+  </g>
+</svg>
