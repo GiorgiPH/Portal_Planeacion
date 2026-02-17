@@ -28,7 +28,7 @@ const otherCards = [
   {
     title: "Secretaría de Anticorrupción y Buen Gobierno",
     icon: ShieldCheck,
-    href: "https://www.morelos.gob.mx/inicio/secretaria-de-la-contraloria",
+    href: "https://www.morelos.gob.mx/inicio/secretaria-anticorrupcion-y-buen-gobierno",
   },
 ]
 
