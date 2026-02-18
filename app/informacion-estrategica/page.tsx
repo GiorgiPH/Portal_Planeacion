@@ -25,12 +25,16 @@ export default function InformacionEstrategicaPage() {
               <h2 className="mb-6 text-2xl font-semibold">Marco Normativo</h2>
               <div className="space-y-3">
                 <NormativeLink
+                  title="Reglamento Interior de la Secretaría de Administración y Finanzas del Poder Ejecutivo Estatal"
+                  href="http://marcojuridico.morelos.gob.mx/archivos/reglamentos_estatales/pdf/REGINTSRIAADMIFIN25.pdf"
+                />
+                <NormativeLink
                   title="Ley de Presupuesto, Contabilidad y Gasto Público del Estado de Morelos"
                   href="http://marcojuridico.morelos.gob.mx/archivos/leyes/pdf/LPGASTOPEM.pdf"
                 />
                 <NormativeLink
-                  title="Acuerdo por el que se crea y regula la Comisión Coordinadora del Sistema de Evaluación del Desempeño Estatal"
-                  href="https://www.gob.mx/shcp/documentos/acuerdo-por-el-que-se-establecen-las-disposiciones-generales-del-sistema-de-evaluacion-del-desempeno"
+                  title="Ley de Planeación para el Estado de Morelos"
+                  href="http://marcojuridico.morelos.gob.mx/archivos/leyes/pdf/LPLANEACIONMO.pdf"
                 />
               </div>
             </section>

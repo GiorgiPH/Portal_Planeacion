@@ -8,7 +8,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 
 const navigationCards = [
   {
-    title: "PED 2025-2030",
+    title: "Plan Estatal de Desarrollo 2025-2030",
     icon: FileText,
     href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Planeaci%C3%B3n%20Estrat%C3%A9gica/I.%20PLAN%20ESTATAL%20DE%20DESARROLLO",
   },

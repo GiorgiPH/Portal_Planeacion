@@ -8,12 +8,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
 const evaluationTypes = [
-  { name: "Diseño", description: "Análisis inicial de la estructura del programa" },
-  { name: "Procesos", description: "Evaluación de la implementación operativa" },
-  { name: "Resultados", description: "Medición de los logros obtenidos" },
-  { name: "Impacto", description: "Análisis del cambio generado a largo plazo" },
-  { name: "Indicadores", description: "Seguimiento de variables clave" },
-  { name: "Estratégicas", description: "Evaluación de orientación y pertinencia" },
+  { name: "Diseño", description: "Analiza la consistencia de los elementos que componen la política pública o programa presupuestario" },
+  { name: "Indicadores", description: "Analiza la pertinencia y alcance de los indicadores para el logro de los resultados" },
+  { name: "Procesos", description: "Mejora la gestión operativa de las políticas públicas y programas presupuestarios" },
+  { name: "Consistencia y Resultados", description: "Evalúa sistemáticamente el diseño y desempeño de las políticas públicas y programas presupuestarios" },
+  { name: "Específica", description: "Evalúa aspectos específicos de una política pública o programa presupuestario" },
+  { name: "Complementarias", description: "Evaluación opcional a políticas públicas o programas presupuestarios no contempladas en el Programa Anual de Evaluación" },
+  { name: "Específica del Desempeño", description: "Valoración sintética del desempeño de las políticas públicas o programas presupuestarios mediante el análisis de indicadores estratégicos y de gestión" },
+  { name: "De Impacto", description: "Mide el cambio que genera una política pública o programa presupuestario sobre su población beneficiaria" },
+  { name: "Estratégica", description: "Analiza problemáticas púbblicas y la respuesta gubernamental implementada" },
+  { name: "Integral", description: "Verifica el desempeño y el funcionamiento de las políticas públicas o programas presupuestarios mediante la aplicación de diversas fases de evaluación" },
 ]
 
 const navigationCards = [
@@ -30,7 +34,7 @@ const navigationCards = [
   {
     title: "Difusión de Evaluaciones (Formato CONAC)",
     icon: ExternalLink,
-    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/V.%20EVALUACIONES%20DE%20DESEMPE%C3%91O",
+    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/VIII.-%20DIFUSI%C3%93N%20DE%20EVALUACIONES",
   },
   {
     title: "Aspectos Susceptibles de Mejora",
@@ -40,7 +44,7 @@ const navigationCards = [
   {
     title: "Términos de Referencia",
     icon: FileText,
-    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/T%C3%A9rminos%20de%20Referencia",
+    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/IX.-%20T%C3%89RMINOS%20DE%20REFERENCIA",
   },
 ]
 
@@ -89,6 +93,10 @@ export default function EvaluacionPage() {
                 />
                 <NormativeLink
                   title="Ley de Presupuesto, Contabilidad y Gasto Público del Estado de Morelos"
+                  href="http://marcojuridico.morelos.gob.mx/archivos/leyes/pdf/LPGASTOPEM.pdf"
+                />
+                <NormativeLink
+                  title="Lineamientos Generaal del Sistema de Evaluación del Desempeño Estatal (SEDE)"
                   href="http://marcojuridico.morelos.gob.mx/archivos/leyes/pdf/LPGASTOPEM.pdf"
                 />
               </div>

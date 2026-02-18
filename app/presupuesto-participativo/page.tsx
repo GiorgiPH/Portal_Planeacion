@@ -118,10 +118,10 @@ export default function PresupuestoParticipativoPage() {
                   title="Reglamento de Asambleas en materia de Presupuesto Participativo del Instituto Morelense de Procesos Electorales y Participación Ciudadana"
                   href="https://impepac.mx/wp-content/uploads/2015/09/Ley-de-Participaci%C3%B3n-CiudadanaV2.pdf"
                 />
-                <NormativeLink
+                {/*<NormativeLink
                   title="Reglas de Operación de Presupuesto Participativo del Estado de Morelos"
                   href="http://marcojuridico.morelos.gob.mx/archivos/reglamentos_estatales/pdf/RLEYPRESUP ARTICIPATIVO.pdf"
-                />
+                />*/}
               </div>
             </section>
 
