@@ -8,7 +8,7 @@ import { Card, CardHeader, CardTitle } from "@/components/ui/card"
 
 const navigationCards = [
   {
-    title: "Reportes Trimestrales de PPs 2025",
+    title: "Reportes Trimestrales de PPs",
     icon: FileText,
     href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/VII.%20EVALUACIONES%20A%20PROGRAMAS%20PRESUPUESTARIOS",
   },
