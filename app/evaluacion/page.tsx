@@ -97,7 +97,11 @@ export default function EvaluacionPage() {
                 />
                 <NormativeLink
                   title="Lineamientos Generales del Sistema de Evaluación del Desempeño Estatal (SEDE)"
-                  href="https://transparencia.morelos.gob.mx/index.php/apps/files/files/25297?dir=/Secretar%C3%ADa%20de%20Administraci%C3%B3n%20y%20Finanzas/PBR%20-%20SED&editing=false&openfile=true"
+                  href="https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED&editing=false&openfile=true"
+                />
+                <NormativeLink
+                  title="Lineamientos generales para el seguimiento de los ASM derivados de evaluaciones a los Programas Presupuestarios y Fondo del Ramo 33"
+                  href="https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED&editing=false&openfile=true"
                 />
               </div>
             </section>
