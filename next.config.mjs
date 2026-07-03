@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/portal-planeacion',
-  assetPrefix: '/portal-planeacion',
+  basePath: process.env.NODE_ENV === 'production' ? '/portal-planeacion' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/portal-planeacion' : '',
   trailingSlash: true,
 
   typescript: {

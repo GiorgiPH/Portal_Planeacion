@@ -27,20 +27,36 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 transition-opacity hover:opacity-80">
+      <div className="container flex h-20 items-center justify-between">
+        <Link href="/" className="flex items-center gap-4 transition-opacity hover:opacity-80">
+          
+          {/* Nuevo Logo (Izquierdo) */}
+          <Image
+            src={withBasePath("/images/MORELOS_011024.png")} // <-- Aquí cambias el nombre de tu nueva imagen
+            alt="Logotipo Institucional Principal"
+            width={190}
+            height={50}
+            className="h-11 w-auto object-contain"
+            priority
+          />
+
+          {/* Línea Divisoria Color Arena Desierto */}
+          <div 
+            className="h-8 w-[2px]" 
+            style={{ backgroundColor: '#E6D5B8' }} 
+            aria-hidden="true"
+          />
+
+          {/* Logo Existente (Derecho) */}
           <Image
             src={withBasePath("/images/logo-finanzas.png")}
             alt="Secretaría de Administración y Finanzas"
             width={180}
             height={40}
-            className="h-10 w-auto"
+            className="h-10 w-auto object-contain"
             priority
           />
-          <div className="hidden sm:flex flex-col">
-            <span className="text-sm font-semibold leading-tight text-foreground">Unidad de Planeación</span>
-            <span className="text-xs text-muted-foreground">Estado de Morelos</span>
-          </div>
+          
         </Link>
 
         <Button variant="ghost" size="icon" onClick={toggleDarkMode} className="rounded-full" aria-label="Toggle theme">

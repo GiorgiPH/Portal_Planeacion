@@ -1,5 +1,5 @@
 // Configuración del proyecto
-export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '/portal-planeacion';
+export const BASE_PATH = process.env.NODE_ENV === 'production' ? '/portal-planeacion' : '';
 
 // Helper para rutas con basePath
 export function withBasePath(path: string): string {
