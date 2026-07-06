@@ -8,10 +8,9 @@ content: [
 ],
 theme: {
     extend: {
-      // AQUÍ SE AGREGA:
-    fontFamily: {
-        quetzalli: ['QuetzalliSans', 'sans-serif'],
-    },
+      fontFamily: {
+        quetzalli: ['Twogether Sans', 'sans-serif'],
+      },
     },
 },
 plugins: [],
