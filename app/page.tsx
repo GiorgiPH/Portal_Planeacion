@@ -71,8 +71,8 @@ export default function HomePage() {
           {/* Contenedor principal */}
           <div className="relative w-full min-h-[450px] xl:min-h-[551px] flex items-center justify-between px-6 sm:px-10 xl:px-16 py-16 xl:py-24">
             
-            {/* 1. Bloque de texto con ancho optimizado para pantallas grandes */}
-            <div className="relative z-30 w-full xl:w-7/12 xl:max-w-3xl text-left">
+            {/* 1. Bloque de texto con ancho optimizado y desplazado a la derecha */}
+            <div className="relative z-30 w-full xl:w-7/12 xl:max-w-3xl ml-0 xl:ml-6 text-left">
               <h1 className="mb-4 text-3xl sm:text-4xl xl:text-6xl font-quetzalli tracking-tight text-balance text-content-inverse">
                 Morelos Planea 
               </h1>
@@ -81,7 +81,8 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* 2. Imagen de Preview más a la izquierda y más grande */}
+            {/* 2. Imagen de Preview comentada */}
+            {/*
             <div className="hidden xl:flex absolute right-28 top-1/2 -translate-y-1/2 z-25 w-7/12 justify-end items-center pointer-events-none">
               <img
                 src="/images/rgb_planeacion.jpeg"
@@ -89,6 +90,7 @@ export default function HomePage() {
                 className="w-full max-w-2xl h-auto object-contain drop-shadow-2xl"
               />
             </div>
+            */}
 
             {/* 3. Contenedor del Isotipo al fondo dentro del Hero */}
             <div className="absolute right-0 top-0 bottom-0 h-full w-full sm:w-1/2 pointer-events-none flex justify-end overflow-hidden z-10">
