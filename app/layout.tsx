@@ -5,7 +5,7 @@ import "./globals.css"
 import { BASE_PATH } from "@/lib/config"
 
 export const metadata: Metadata = {
-  title: "Unidad de Planeación del Estado de Morelos",
+  title: "Morelos Planea",
   description:
     "Portal oficial de la Unidad de Planeación del Estado de Morelos - Información sobre planeación, presupuesto, seguimiento y evaluación",
   generator: "v0.app",

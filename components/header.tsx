@@ -11,13 +11,14 @@ export function Header() {
   const [isDark, setIsDark] = useState(false)
 
   useEffect(() => {
-    const isDarkMode = document.documentElement.classList.contains("dark")
+    const isDarkMode = document.documentElement.dataset.theme === "dark"
     setIsDark(isDarkMode)
   }, [])
 
   const toggleDarkMode = () => {
     const newMode = !isDark
     setIsDark(newMode)
+    document.documentElement.dataset.theme = newMode ? "dark" : "light"
     if (newMode) {
       document.documentElement.classList.add("dark")
     } else {
@@ -40,12 +41,7 @@ export function Header() {
             priority
           />
 
-          {/* Línea Divisoria Color Arena Desierto */}
-          <div 
-            className="h-8 w-[2px]" 
-            style={{ backgroundColor: '#E6D5B8' }} 
-            aria-hidden="true"
-          />
+          <div className="h-8 w-[2px] bg-bg-surface-emphasis" aria-hidden="true" />
 
           {/* Logo Existente (Derecho) */}
           <Image

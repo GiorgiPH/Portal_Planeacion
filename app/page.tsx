@@ -62,53 +62,48 @@ const modules = [
 
 export default function HomePage() {
   return (
-    // Color Hueso/Arena (#ECEBE6) aplicado como fondo base
-    <div className="flex min-h-screen flex-col" style={{ backgroundColor: '#ECEBE6' }}>
+    <div className="flex min-h-screen flex-col bg-bg-surface-low">
       <Header />
 
       <main className="flex-1">
-        {/* Hero Section: Ahora limpio de la cenefa absoluta para que luzca el Isotipo completo */}
-        <section
-          className="relative overflow-hidden"
-          style={{ backgroundColor: '#2E3B2B' }}
-        >
+        {/* Hero Section */}
+        <section className="relative overflow-hidden rounded-b-3xl lg:rounded-b-[2.5rem] bg-[#1E2B1C] shadow-xl w-full">
           {/* Contenedor principal */}
-          <div className="relative w-full min-h-[350px] md:min-h-[450px] flex items-center justify-center px-4 sm:px-6 md:px-8 py-16 md:py-24">
+          <div className="relative w-full min-h-[450px] md:min-h-[551px] flex items-center justify-between px-6 sm:px-10 md:px-16 py-16 md:py-24">
             
-            {/* Bloque de texto */}
-            <div className="relative z-10 w-full max-w-3xl text-center">
-              <h1 className="mb-4 text-4xl font-quetzalli tracking-tight text-balance md:text-5xl lg:text-6xl text-white">
-                Unidad de Planeación del Estado de Morelos
+            {/* 1. Bloque de texto a la izquierda con mayor amplitud */}
+            <div className="relative z-30 w-full max-w-3xl text-left ml-2 sm:ml-6 md:ml-12">
+              <h1 className="mb-4 text-4xl font-quetzalli tracking-tight text-balance text-content-inverse md:text-5xl lg:text-6xl">
+                Morelos Planea 
               </h1>
-              <p className="text-lg md:text-xl text-balance font-medium" style={{ color: '#CBCABE' }}>
-                Aquí encontrarás información disponible para ti
+              <p className="text-lg md:text-xl text-balance font-medium text-content-inverse-low">
+                Conoce, consulta y da seguimiento a la planeación, programación, presupuesto, seguimiento y evaluación de los programas públicos del Estado de Morelos.
               </p>
             </div>
 
-            {/* Contenedor del Isotipo: Ya no se tapa con nada */}
-            <div className="absolute right-0 top-0 bottom-0 h-full w-full sm:w-1/2 pointer-events-none flex justify-end overflow-hidden">
+            {/* 2. Imagen de Preview más desplazada hacia la izquierda */}
+            <div className="hidden lg:flex absolute right-28 top-1/2 -translate-y-1/2 z-20 w-7/12 justify-end items-center pointer-events-none">
+              <img
+                src="/images/portal_planeacion.png"
+                alt="Portal Planeación Preview"
+                className="w-full max-w-2xl h-auto object-contain drop-shadow-2xl"
+              />
+            </div>
+
+            {/* 3. Contenedor del Isotipo al fondo (atrás) */}
+            <div className="absolute right-0 top-0 bottom-0 h-full w-full sm:w-1/2 pointer-events-none flex justify-end overflow-hidden z-10">
               <img
                 src="/images/Isotipo.svg"
                 alt="Isotipo"
-                className="h-full w-auto object-cover object-right opacity-30 md:opacity-50"
+                className="h-full w-auto object-cover object-right opacity-20 md:opacity-40"
               />
             </div>
 
           </div>
         </section>
 
-        {/* CONTENEDOR DE LA CENEFA PNG (FUERA DEL HERO) */}
-        {/* Al estar en el flujo normal, se sienta justo debajo del bloque verde y encima de los módulos */}
-        <div className="w-full h-4 sm:h-6 pointer-events-none overflow-hidden">
-          <img 
-            src="/images/Cenefa.png" 
-            alt="Cenefa Institucional" 
-            className="w-full h-full object-cover object-top" 
-          />
-        </div>
-
         {/* Grid de Módulos */}
-        <section className="container py-12 md:py-16">
+        <section className="container py-12 md:py-16 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {modules.map((module) => (
               <ModuleCard key={module.href} {...module} />

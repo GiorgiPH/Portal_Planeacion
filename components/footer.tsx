@@ -5,8 +5,7 @@ import { withBasePath } from "@/lib/config"
 
 export function Footer() {
   return (
-    // Rediseño: Removido el borde sólido para dar paso a la cenefa como separación
-    <footer className="w-full" style={{ backgroundColor: '#2E3B2B' }}>
+    <footer className="w-full bg-bg-surface-inverse text-content-inverse">
       
       {/* CONTENEDOR DE LA CENEFA PNG (INICIO DEL FOOTER) */}
       {/* Sirve de transición exacta entre el fondo claro de la página y el verde oscuro */}
@@ -31,20 +30,20 @@ export function Footer() {
                 className="h-14 w-auto brightness-0 invert" 
               />
             </div>
-            <p className="text-sm leading-relaxed" style={{ color: '#CBCABE' }}>
+            <p className="text-sm leading-relaxed text-content-inverse-low">
               Gobierno del Estado de Morelos
             </p>
           </div>
 
           <div>
             <h3 className="font-semibold mb-4 text-white uppercase tracking-wider text-xs">Contacto</h3>
-            <div className="space-y-3 text-sm" style={{ color: '#CBCABE' }}>
+            <div className="space-y-3 text-sm text-content-inverse-low">
               <div className="flex items-start gap-2">
-                <MapPin className="h-4 w-4 mt-0.5 shrink-0" style={{ color: '#773357' }} />
+                <MapPin className="h-4 w-4 mt-0.5 shrink-0 text-accent-primary" />
                 <span>Galeana 4, Edificio de la Beneficiencia Española, 3er Piso, Despacho 307, Cuernavaca Centro, Morelos, México</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4 shrink-0" style={{ color: '#773357' }} />
+                <Phone className="h-4 w-4 shrink-0 text-accent-primary" />
                 <span>(777) 318-9072</span>
               </div>
             </div>
@@ -52,7 +51,7 @@ export function Footer() {
 
           <div>
             <h3 className="font-semibold mb-4 text-white uppercase tracking-wider text-xs">Enlaces</h3>
-            <ul className="space-y-2 text-sm" style={{ color: '#CBCABE' }}>
+            <ul className="space-y-2 text-sm text-content-inverse-low">
               <li>
               {/*<Link href="/" className="hover:text-white transition-colors">
                   Inicio
@@ -83,7 +82,7 @@ export function Footer() {
 
           <div>
             <h3 className="font-semibold mb-4 text-white uppercase tracking-wider text-xs">Transparencia</h3>
-            <ul className="space-y-2 text-sm" style={{ color: '#CBCABE' }}>
+            <ul className="space-y-2 text-sm text-content-inverse-low">
               <li>
                 {/*<Link href="/rendicion-de-cuentas" className="hover:text-white transition-colors">
                   Rendición de Cuentas
@@ -114,7 +113,7 @@ export function Footer() {
         </div>
 
         {/* Línea divisoria inferior de derechos de autor */}
-        <div className="mt-8 pt-8 border-t text-center text-xs" style={{ borderColor: 'rgba(203, 202, 190, 0.2)', color: '#CBCABE' }}>
+        <div className="mt-8 border-t border-border-inverse-low pt-8 text-center text-xs text-content-inverse-low">
           <p>© {new Date().getFullYear()} Secretaría de Administración y Finanzas del Estado de Morelos / Dirección General de Sistemas y Armonización Contable. Todos los derechos reservados.</p>
         </div>
       </div>
