@@ -23,24 +23,26 @@ export function CicloPresupuestario({ highlightStage }: CicloPresupuestarioProps
   const position = stagePositions[highlightStage]
 
   return (
-    <div className="flex flex-col items-center justify-center rounded-lg bg-muted/50 p-4 md:p-8">
-      <div className="relative w-full max-w-4xl">
+    <div className="flex flex-col items-center justify-center overflow-hidden rounded-lg bg-muted/50 p-3 sm:p-4 md:p-8">
+      <div className="relative w-full max-w-6xl pt-14">
         {/* Arrow indicator */}
         <div
-          className="absolute -top-2 flex flex-col items-center transition-all duration-300"
+          className="absolute left-0 top-0 z-10 flex -translate-x-1/2 flex-col items-center transition-all duration-300"
           style={{ left: position.left, transform: "translateX(-50%)" }}
         >
-          <span className="mb-1 whitespace-nowrap rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground shadow-lg">
+          <span className="mb-1 max-w-[9rem] whitespace-normal rounded-full bg-primary px-3 py-1 text-center text-xs font-semibold leading-tight text-primary-foreground shadow-lg sm:max-w-none sm:whitespace-nowrap">
             {position.label}
           </span>
-          <ArrowDown className="h-6 w-6 text-primary animate-bounce" />
+          <ArrowDown className="h-6 w-6 animate-bounce text-primary" aria-hidden="true" />
         </div>
 
         {/* Budget cycle image */}
         <img
-          src={withBasePath("/images/ciclo-presupuestario.png")}
+          src={withBasePath("/images/rgb_planeacion.jpeg")}
           alt="Ciclo Presupuestario - 7 etapas: Planeación, Programación, Presupuestación, Ejercicio y Control, Seguimiento, Evaluación, Rendición de Cuentas"
-          className="mt-10 w-full"
+          width={4000}
+          height={1000}
+          className="block aspect-[4/1] w-full object-contain"
         />
       </div>
       <p className="mt-4 text-sm text-muted-foreground">Ciclo Presupuestario</p>
