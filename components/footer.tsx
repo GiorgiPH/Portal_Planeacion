@@ -7,17 +7,16 @@ export function Footer() {
   return (
     <footer className="w-full bg-bg-surface-inverse text-content-inverse">
       
-      {/* CONTENEDOR DE LA CENEFA PNG (INICIO DEL FOOTER) */}
-      {/* Sirve de transición exacta entre el fondo claro de la página y el verde oscuro */}
-      <div className="w-full h-4 sm:h-6 pointer-events-none overflow-hidden">
+      {/* CONTENEDOR DE LA CENEFA PNG (POR ENCIMA DEL BLOQUE DE COLOR VERDE) */}
+      <div className="w-full h-3 sm:h-6 pointer-events-none overflow-hidden bg-bg-surface-low">
         <img 
-          src="/images/Cenefa.png" // Ajusta aquí la ruta y nombre exacto de tu archivo PNG
+          src="/images/Cenefa.png" 
           alt="Cenefa Institucional" 
           className="w-full h-full object-cover object-top" 
         />
       </div>
 
-      <div className="container py-12">
+      <div className="container py-20">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-2 mb-4">
@@ -26,7 +25,7 @@ export function Footer() {
                 src={withBasePath("/images/logo-finanzas.png")}
                 alt="Secretaría de Administración y Finanzas"
                 width={200}
-                height={40}
+                height={450}
                 className="h-14 w-auto brightness-0 invert" 
               />
             </div>

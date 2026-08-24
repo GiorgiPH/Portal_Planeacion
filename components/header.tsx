@@ -1,63 +1,68 @@
 "use client"
 
-import { Moon, Sun } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { useState, useEffect } from "react"
 import Image from "next/image"
+import { Home } from "lucide-react"
 import { withBasePath } from "@/lib/config"
 
 export function Header() {
-  const [isDark, setIsDark] = useState(false)
-
-  useEffect(() => {
-    const isDarkMode = document.documentElement.dataset.theme === "dark"
-    setIsDark(isDarkMode)
-  }, [])
-
-  const toggleDarkMode = () => {
-    const newMode = !isDark
-    setIsDark(newMode)
-    document.documentElement.dataset.theme = newMode ? "dark" : "light"
-    if (newMode) {
-      document.documentElement.classList.add("dark")
-    } else {
-      document.documentElement.classList.remove("dark")
-    }
-  }
-
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center gap-4 transition-opacity hover:opacity-80">
-          
-          {/* Nuevo Logo (Izquierdo) */}
+    <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white shadow-sm">
+      <div className="w-full flex h-24 items-center justify-between px-3 sm:px-6 lg:px-10">
+        
+        {/* Lado Izquierdo: Logotipos institucionales pegados al borde */}
+        <Link href="/" className="flex items-center gap-5 transition-opacity hover:opacity-80">
           <Image
-            src={withBasePath("/images/MORELOS_011024.png")} // <-- Aquí cambias el nombre de tu nueva imagen
+            src={withBasePath("/images/MORELOS_011024.png")}
             alt="Logotipo Institucional Principal"
-            width={190}
-            height={50}
-            className="h-11 w-auto object-contain"
+            width={230}
+            height={60}
+            className="h-14 w-auto object-contain"
             priority
           />
 
-          <div className="h-8 w-[2px] bg-bg-surface-emphasis" aria-hidden="true" />
+          <div className="h-10 w-[2px] bg-gray-200" aria-hidden="true" />
 
-          {/* Logo Existente (Derecho) */}
           <Image
             src={withBasePath("/images/logo-finanzas.png")}
             alt="Secretaría de Administración y Finanzas"
-            width={180}
-            height={40}
-            className="h-10 w-auto object-contain"
+            width={220}
+            height={50}
+            className="h-12 w-auto object-contain"
             priority
           />
-          
         </Link>
 
-        <Button variant="ghost" size="icon" onClick={toggleDarkMode} className="rounded-full" aria-label="Toggle theme">
-          {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-        </Button>
+        {/* Centro/Derecha: Botón de inicio (casa) y enlaces personalizados */}
+        <div className="flex items-center gap-6 pr-4 sm:pr-8">
+          
+          {/* Botón de la casa para regresar al menú principal */}
+          <Link 
+            href="/" 
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-[#EAEBD8] text-[#1E2B1C] transition-transform hover:scale-105"
+            aria-label="Ir al menú principal"
+          >
+            <Home className="h-5 w-5" />
+          </Link>
+
+          {/* Enlaces de navegación */}
+          <nav className="hidden lg:flex items-center gap-8">
+            <Link 
+              href="/presupuesto-participativo" 
+              className="text-[#1E2B1C] font-medium text-sm transition-colors hover:text-black"
+            >
+              ¿Sabes que es el Presupuesto Participativo?
+            </Link>
+
+            <Link 
+              href="/rendicion-de-cuentas" 
+              className="text-[#1E2B1C] font-medium text-sm transition-colors hover:text-black"
+            >
+              Rendición de Cuentas
+            </Link>
+          </nav>
+        </div>
+
       </div>
     </header>
   )
