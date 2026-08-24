@@ -81,16 +81,16 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* 2. Imagen de Preview en pantallas grandes */}
-            <div className="hidden xl:flex absolute right-16 top-1/2 -translate-y-1/2 z-25 w-6/12 justify-end items-center pointer-events-none">
+            {/* 2. Imagen de Preview más a la izquierda y más grande */}
+            <div className="hidden xl:flex absolute right-28 top-1/2 -translate-y-1/2 z-25 w-7/12 justify-end items-center pointer-events-none">
               <img
-                src="/images/portal_planeacion.png"
+                src="/images/rgb_planeacion.jpeg"
                 alt="Portal Planeación Preview"
-                className="w-full max-w-xl h-auto object-contain drop-shadow-2xl"
+                className="w-full max-w-2xl h-auto object-contain drop-shadow-2xl"
               />
             </div>
 
-            {/* 3. Contenedor del Isotipo al fondo */}
+            {/* 3. Contenedor del Isotipo al fondo dentro del Hero */}
             <div className="absolute right-0 top-0 bottom-0 h-full w-full sm:w-1/2 pointer-events-none flex justify-end overflow-hidden z-10">
               <img
                 src="/images/Isotipo.svg"
