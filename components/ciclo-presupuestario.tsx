@@ -10,13 +10,13 @@ interface CicloPresupuestarioProps {
 }
 
 const stagePositions: Record<Stage, { left: string; label: string }> = {
-  planeacion: { left: "7%", label: "Planeación" },
-  programacion: { left: "20%", label: "Programación" },
+  planeacion: { left: "11%", label: "Planeación" },
+  programacion: { left: "26%", label: "Programación" },
   presupuestacion: { left: "35%", label: "Presupuestación" },
   ejercicio: { left: "50%", label: "Ejercicio y Control" },
-  seguimiento: { left: "64%", label: "Seguimiento" },
-  evaluacion: { left: "78%", label: "Evaluación" },
-  rendicion: { left: "92%", label: "Rendición de Cuentas" },
+  seguimiento: { left: "68%", label: "Seguimiento" },
+  evaluacion: { left: "82%", label: "Evaluación" },
+  rendicion: { left: "99%", label: "Rendición de Cuentas" },
 }
 
 export function CicloPresupuestario({ highlightStage }: CicloPresupuestarioProps) {
