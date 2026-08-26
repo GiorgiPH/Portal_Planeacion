@@ -13,15 +13,6 @@ export const metadata: Metadata = {
     icon: [
       {
         url: `${BASE_PATH}/favicon.ico`,
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: `${BASE_PATH}/favicon.ico`,
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: `${BASE_PATH}/favicon.ico`,
-        type: "image/svg+xml",
       },
     ],
     apple: `${BASE_PATH}/apple-icon.png`,
