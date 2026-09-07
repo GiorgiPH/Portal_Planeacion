@@ -10,11 +10,12 @@ export function Footer() {
       
       {/* CONTENEDOR DE LA CENEFA PNG (INICIO DEL FOOTER) */}
       {/* Sirve de transición exacta entre el fondo claro de la página y el verde oscuro */}
-      <div className="w-full h-4 sm:h-6 pointer-events-none overflow-hidden">
-        <img 
-          src="/images/Cenefa.png" // Ajusta aquí la ruta y nombre exacto de tu archivo PNG
-          alt="Cenefa Institucional" 
-          className="w-full h-full object-cover object-top" 
+      <div className="relative w-full h-4 sm:h-6 pointer-events-none overflow-hidden">
+        <Image
+          src={withBasePath("/images/Cenefa.png")}
+          alt="Cenefa Institucional"
+          fill
+          className="object-cover object-top"
         />
       </div>
 

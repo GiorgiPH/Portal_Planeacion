@@ -1,6 +1,8 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ModuleCard } from "@/components/module-card"
+import { withBasePath } from "@/lib/config"
+import Image from "next/image"
 import { Users, Wallet, Info, Target, Calendar, LineChart, ClipboardCheck, FileCheck, Building } from "lucide-react"
 
 const modules = [
@@ -86,11 +88,12 @@ export default function HomePage() {
             </div>
 
             {/* Contenedor del Isotipo: Ya no se tapa con nada */}
-            <div className="absolute right-0 top-0 bottom-0 h-full w-full sm:w-1/2 pointer-events-none flex justify-end overflow-hidden">
-              <img
-                src="/images/Isotipo.svg"
+            <div className="absolute right-0 top-0 bottom-0 h-full w-full sm:w-1/2 pointer-events-none overflow-hidden">
+              <Image
+                src={withBasePath("/images/Isotipo.svg")}
                 alt="Isotipo"
-                className="h-full w-auto object-cover object-right opacity-30 md:opacity-50"
+                fill
+                className="object-cover object-right opacity-30 md:opacity-50"
               />
             </div>
 
@@ -99,11 +102,12 @@ export default function HomePage() {
 
         {/* CONTENEDOR DE LA CENEFA PNG (FUERA DEL HERO) */}
         {/* Al estar en el flujo normal, se sienta justo debajo del bloque verde y encima de los módulos */}
-        <div className="w-full h-4 sm:h-6 pointer-events-none overflow-hidden">
-          <img 
-            src="/images/Cenefa.png" 
-            alt="Cenefa Institucional" 
-            className="w-full h-full object-cover object-top" 
+        <div className="relative w-full h-4 sm:h-6 pointer-events-none overflow-hidden">
+          <Image
+            src={withBasePath("/images/Cenefa.png")}
+            alt="Cenefa Institucional"
+            fill
+            className="object-cover object-top"
           />
         </div>
 
