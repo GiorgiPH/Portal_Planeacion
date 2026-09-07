@@ -5,9 +5,8 @@ export const BASE_PATH = process.env.NODE_ENV === 'production' ? '/portal-planea
 export function withBasePath(path: string): string {
   // Asegurar que el path no tenga doble slash
   const cleanPath = path.startsWith('/') ? path : `/${path}`;
-  //return `${BASE_PATH}${cleanPath}`;
-    return '/';
-
+  return `${cleanPath}`;
+  
 }
 
 /* export function withBasePath(path: string): string {
