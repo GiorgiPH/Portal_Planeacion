@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '',
-  assetPrefix:  '',
-  trailingSlash: false,
+  basePath: process.env.NODE_ENV === 'production' ? '/portal-planeacion' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/portal-planeacion' : '',
+  trailingSlash: true,
 
   typescript: {
     ignoreBuildErrors: true,
