@@ -117,6 +117,7 @@ export default function RendicionDeCuentasPage() {
                 ))}
               </div>
             </section>
+            
             <section>
               <h2 className="mb-6 text-2xl font-semibold">Presupuesto Ciudadano</h2>
               <Card>

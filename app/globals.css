@@ -1,109 +1,615 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+/* ============================================================================
+  MORELOS TYPOGRAPHY — Twogether Sans
+   ============================================================================ */
 @font-face {
-  font-family: "Twogether Sans";
-  src: url("/fonts/TwogetherSans-Regular.otf") format("opentype");
+  font-family: 'Twogether Sans';
+  src: url('/fonts/TwogetherSans-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Twogether Sans';
+  src: url('/fonts/TwogetherSans-ExtraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Twogether Sans';
+  src: url('/fonts/TwogetherSans-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Twogether Sans';
+  src: url('/fonts/TwogetherSans-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: "Twogether Sans";
-  src: url("/fonts/TwogetherSans-Bold.otf") format("opentype");
+  font-family: 'Twogether Sans';
+  src: url('/fonts/TwogetherSans-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Twogether Sans';
+  src: url('/fonts/TwogetherSans-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: "Twogether Sans";
-  src: url("/fonts/TwogetherSans-Italic.otf") format("opentype");
+  font-family: 'Twogether Sans';
+  src: url('/fonts/TwogetherSans-Heavy.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Twogether Sans';
+  src: url('/fonts/TwogetherSans-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Twogether Sans';
+  src: url('/fonts/TwogetherSans-HeavyItalic.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Twogether Sans';
+  src: url('/fonts/TwogetherSans-BlackItalic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Twogether Sans';
+  src: url('/fonts/TwogetherSans-Italic.otf') format('opentype');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Twogether Sans';
+  src: url('/fonts/TwogetherSans-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Twogether Sans';
+  src: url('/fonts/TwogetherSans-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Twogether Sans';
+  src: url('/fonts/TwogetherSans-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Twogether Sans';
+  src: url('/fonts/TwogetherSans-ExtraLightItalic.otf') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Twogether Sans';
+  src: url('/fonts/TwogetherSans-ThinItalic.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
 
-@import "tailwindcss";
-@import "tw-animate-css";
+/* ============================================================================
+  MORELOS DESIGN SYSTEM — Portal de Planeación (Integración no destructiva)
+   ============================================================================ */
 
-@custom-variant dark (&:is(.dark *));
+/* Utilidades `dark:` aplican solo en el tema Oscuro (data-theme="dark"). */
+@custom-variant dark (&:is([data-theme='dark'] *));
 
+/* 1) CORE RAMPS — ramps de luminosidad */
 :root {
-  /* Governmental color palette for Morelos Planning Unit */
-  --background: oklch(0.98 0.005 85);
-  --foreground: oklch(0.25 0.02 140);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.25 0.02 140);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.25 0.02 140);
-  --primary: oklch(0.32 0.04 135);
-  --primary-foreground: oklch(0.98 0.01 85);
-  --secondary: oklch(0.7 0.05 70);
-  --secondary-foreground: oklch(0.15 0.02 140);
-  --muted: oklch(0.92 0.01 85);
-  --muted-foreground: oklch(0.5 0.02 140);
-  --accent: oklch(0.42 0.08 45);
-  --accent-foreground: oklch(0.98 0.01 85);
-  --destructive: oklch(0.55 0.2 25);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.88 0.01 85);
-  --input: oklch(0.88 0.01 85);
-  --ring: oklch(0.42 0.08 45);
-  --chart-1: oklch(0.32 0.04 135);
-  --chart-2: oklch(0.42 0.08 45);
-  --chart-3: oklch(0.52 0.06 85);
-  --chart-4: oklch(0.62 0.05 70);
-  --chart-5: oklch(0.38 0.06 120);
-  --radius: 0.5rem;
-  --sidebar: oklch(0.98 0.005 85);
-  --sidebar-foreground: oklch(0.25 0.02 140);
-  --sidebar-primary: oklch(0.32 0.04 135);
-  --sidebar-primary-foreground: oklch(0.98 0.01 85);
-  --sidebar-accent: oklch(0.92 0.01 85);
-  --sidebar-accent-foreground: oklch(0.25 0.02 140);
-  --sidebar-border: oklch(0.88 0.01 85);
-  --sidebar-ring: oklch(0.42 0.08 45);
+  --color-core-global-100: #ffffff;
+  --color-core-global-95: #f1f1f0;
+  --color-core-global-90: #e3e2e2;
+  --color-core-global-80: #c6c6c6;
+  --color-core-global-75: #b8b9b9;
+  --color-core-global-70: #ababab;
+  --color-core-global-60: #909191;
+  --color-core-global-50: #767777;
+  --color-core-global-40: #5d5e5f;
+  --color-core-global-30: #454747;
+  --color-core-global-20: #2f3131;
+  --color-core-global-10: #1a1c1c;
+  --color-core-global-0: #000000;
+
+  --color-core-verde-tierra-95: #edf4d1;
+  --color-core-verde-tierra-90: #dfe6c3;
+  --color-core-verde-tierra-80: #c3caa8;
+  --color-core-verde-tierra-70: #a7af8e;
+  --color-core-verde-tierra-60: #8d9475;
+  --color-core-verde-tierra-50: #71785b;
+  --color-core-verde-tierra-40: #5a6146;
+  --color-core-verde-tierra-30: #434a30;
+  --color-core-verde-tierra-20: #2d331b;
+  --color-core-verde-tierra-10: #181e08;
+
+  --color-core-arena-95: #ffeedd;
+  --color-core-arena-90: #ffddb6;
+  --color-core-arena-80: #e4c196;
+  --color-core-arena-70: #bc9b73;
+  --color-core-arena-60: #ab8b64;
+  --color-core-arena-50: #8f724d;
+  --color-core-arena-40: #755937;
+  --color-core-arena-30: #5b4221;
+  --color-core-arena-20: #422c0d;
+  --color-core-arena-10: #2a1800;
+
+  --color-core-bosque-95: #e6f5de;
+  --color-core-bosque-90: #d8e7d0;
+  --color-core-bosque-80: #bccbb5;
+  --color-core-bosque-70: #a1b09a;
+  --color-core-bosque-60: #869581;
+  --color-core-bosque-50: #6d7b68;
+  --color-core-bosque-40: #546250;
+  --color-core-bosque-30: #3d4a39;
+  --color-core-bosque-20: #2e3b2b;
+  --color-core-bosque-10: #121f10;
+
+  --color-core-piedra-97: #f5f4f2;
+  --color-core-piedra-95: #ebeade;
+  --color-core-piedra-90: #e4e3d6;
+  --color-core-piedra-80: #cbcabe;
+  --color-core-piedra-70: #acaca0;
+  --color-core-piedra-60: #929186;
+  --color-core-piedra-50: #78786d;
+  --color-core-piedra-40: #5f5f55;
+  --color-core-piedra-30: #47473e;
+  --color-core-piedra-20: #303129;
+  --color-core-piedra-15: #26261e;
+  --color-core-piedra-10: #1b1c15;
+  --color-core-piedra-5: #11120a;
+
+  --color-core-mora-95: #ffecf2;
+  --color-core-mora-90: #ffd8e7;
+  --color-core-mora-80: #ffafd4;
+  --color-core-mora-70: #e791ba;
+  --color-core-mora-60: #c9779f;
+  --color-core-mora-50: #ab5e84;
+  --color-core-mora-40: #8e466b;
+  --color-core-mora-30: #773357;
+  --color-core-mora-20: #57183c;
+  --color-core-mora-10: #3c0126;
+
+  --color-core-tierra-90: #e5dbd7;
+  --color-core-tierra-80: #cbb7af;
+  --color-core-tierra-70: #b09286;
+  --color-core-tierra-60: #966e5e;
+  --color-core-tierra-50: #7c4a36;
+  --color-core-tierra-40: #633b2b;
+  --color-core-tierra-30: #4a2c20;
+  --color-core-tierra-20: #321e16;
+  --color-core-tierra-10: #190f0b;
+
+  --color-core-yellow-95: #ffefb6;
+  --color-core-yellow-90: #fad550;
+  --color-core-yellow-80: #e7b400;
+  --color-core-yellow-70: #be8800;
+  --color-core-yellow-60: #aa7a00;
+  --color-core-yellow-50: #936901;
+
+  --color-core-green-95: #d2fad2;
+  --color-core-green-90: #a6f6a6;
+  --color-core-green-80: #75d975;
+  --color-core-green-70: #36a800;
+  --color-core-green-60: #039409;
+  --color-core-green-50: #1c7d29;
+
+  --color-core-blue-90: #ecf2ff;
+  --color-core-blue-80: #b2ccff;
+  --color-core-blue-30: #79a6ff;
+  --color-core-blue-40: #3f80ff;
+  --color-core-blue-50: #3266cb;
+  --color-core-blue-60: #254c97;
+  --color-core-blue-70: #193264;
+
+  --color-core-red-95: #ffeaea;
+  --color-core-red-90: #ffd6d7;
+  --color-core-red-80: #ffadaf;
+  --color-core-red-70: #ff6e70;
+  --color-core-red-60: #ef4043;
+  --color-core-red-50: #da3237;
+  --color-core-red-40: #c22124;
+  --color-core-red-30: #87090c;
+
+  --radius: 0.625rem;
 }
 
-.dark {
-  /* Dark mode for government portal */
-  --background: oklch(0.18 0.02 140);
-  --foreground: oklch(0.95 0.01 85);
-  --card: oklch(0.22 0.02 140);
-  --card-foreground: oklch(0.95 0.01 85);
-  --popover: oklch(0.22 0.02 140);
-  --popover-foreground: oklch(0.95 0.01 85);
-  --primary: oklch(0.6 0.06 85);
-  --primary-foreground: oklch(0.15 0.02 140);
-  --secondary: oklch(0.32 0.03 140);
-  --secondary-foreground: oklch(0.95 0.01 85);
-  --muted: oklch(0.28 0.02 140);
-  --muted-foreground: oklch(0.65 0.02 85);
-  --accent: oklch(0.5 0.08 45);
-  --accent-foreground: oklch(0.95 0.01 85);
-  --destructive: oklch(0.45 0.18 25);
-  --destructive-foreground: oklch(0.95 0 0);
-  --border: oklch(0.32 0.02 140);
-  --input: oklch(0.32 0.02 140);
-  --ring: oklch(0.5 0.08 45);
-  --chart-1: oklch(0.6 0.06 85);
-  --chart-2: oklch(0.5 0.08 45);
-  --chart-3: oklch(0.52 0.06 85);
-  --chart-4: oklch(0.62 0.05 70);
-  --chart-5: oklch(0.58 0.06 120);
-  --sidebar: oklch(0.2 0.02 140);
-  --sidebar-foreground: oklch(0.95 0.01 85);
-  --sidebar-primary: oklch(0.6 0.06 85);
-  --sidebar-primary-foreground: oklch(0.15 0.02 140);
-  --sidebar-accent: oklch(0.28 0.02 140);
-  --sidebar-accent-foreground: oklch(0.95 0.01 85);
-  --sidebar-border: oklch(0.32 0.02 140);
-  --sidebar-ring: oklch(0.5 0.08 45);
+/* ============================================================================
+  2) TOKENS SEMÁNTICOS (Tema Claro por defecto)
+   ============================================================================ */
+:root {
+  --sem-support-error: #da3237;
+  --sem-support-on-error: #ffffff;
+  --sem-support-error-low: #ffeaea;
+  --sem-support-on-error-low: #87090c;
+  --sem-support-warning: #936901;
+  --sem-support-on-warning: #ffffff;
+  --sem-support-warning-low: #ffefb6;
+  --sem-support-on-warning-low: #936901;
+  --sem-support-success: #1c7d29;
+  --sem-support-on-success: #ffffff;
+  --sem-support-success-low: #d2fad2;
+  --sem-support-on-success-low: #1c7d29;
+  --sem-support-info: #3266cb;
+  --sem-support-on-info: #ffffff;
+  --sem-support-info-low: #ecf2ff;
+  --sem-support-on-info-low: #3266cb;
+  --sem-support-disabled: #c6c6c6;
+  --sem-support-disabled-low: #f1f1f0;
+  --sem-support-on-disabled-low: #c6c6c6;
+  --sem-support-focus: #e7b400;
+  --sem-support-on-focus: #000000;
+
+  --sem-reactive-surface-hover: rgba(113, 120, 91, 0.1);
+  --sem-reactive-surface-pressed: rgba(113, 120, 91, 0.25);
+  --sem-reactive-accent-hover: rgba(60, 1, 38, 0.25);
+  --sem-reactive-accent-pressed: rgba(60, 1, 38, 0.5);
+  --sem-reactive-accent-active: rgba(201, 119, 159, 0.18);
+  --sem-reactive-inverse-hover: rgba(255, 255, 255, 0.15);
+  --sem-reactive-inverse-pressed: rgba(255, 255, 255, 0.25);
+
+  --sem-border-highest: #6d7b68;
+  --sem-border-high: #acaca0;
+  --sem-border-md: #cbcabe;
+  --sem-border-low: #e4e3d6;
+  --sem-border-inverse-highest: #ffffff;
+  --sem-border-inverse-md: rgba(255, 255, 255, 0.25);
+  --sem-border-inverse-low: rgba(255, 255, 255, 0.1);
+
+  --sem-bg-surface-emphasis: #ffeedd;
+  --sem-bg-surface-high: #e4e3d6;
+  --sem-bg-surface-md: #ebeade;
+  --sem-bg-surface-low: #f5f4f2;
+  --sem-bg-base: #ffffff;
+  --sem-bg-surface-inverse: #2e3b2b;
+  --sem-bg-surface-inverse-md: #71785b;
+
+  --sem-accent-primary: #773357;
+  --sem-accent-on-primary: #ffffff;
+  --sem-accent-primary-low: #ffd8e7;
+  --sem-accent-on-primary-low: #773357;
+  --sem-accent-secondary: #71785b;
+  --sem-accent-on-secondary: #ffffff;
+  --sem-accent-secondary-low: #dfe6c3;
+  --sem-accent-on-secondary-low: #2d331b;
+  --sem-accent-inverse: #f5f4f2;
+  --sem-accent-on-inverse: #3d4a39;
+  --sem-accent-neutral: rgba(255, 255, 255, 0.75);
+  --sem-accent-on-neutral: #3d4a39;
+
+  --sem-content-emphasis: #8f724d;
+  --sem-content-high: #2e3b2b;
+  --sem-content-low: #5d5e5f;
+  --sem-content-inverse: #ffffff;
+  --sem-content-inverse-low: #c6c6c6;
+
+  /* Shims Shadcn */
+  --background: var(--sem-bg-base);
+  --foreground: var(--sem-content-high);
+  --card: var(--sem-bg-base);
+  --card-foreground: var(--sem-content-high);
+  --popover: var(--sem-bg-base);
+  --popover-foreground: var(--sem-content-high);
+  --primary: var(--sem-accent-secondary);
+  --primary-foreground: var(--sem-accent-on-secondary);
+  --secondary: var(--sem-bg-surface-md);
+  --secondary-foreground: var(--sem-content-high);
+  --muted: var(--sem-bg-surface-low);
+  --muted-foreground: var(--sem-content-low);
+  --accent: var(--sem-content-emphasis);
+  --accent-foreground: var(--sem-content-inverse);
+  --destructive: var(--sem-accent-primary);
+  --destructive-foreground: var(--sem-accent-on-primary);
+  --border: var(--sem-border-low);
+  --input: var(--sem-border-md);
+  --ring: var(--sem-content-high);
 }
 
+/* Tema Oscuro */
+[data-theme='dark'] {
+  --sem-support-error: #da3237;
+  --sem-support-on-error: #ffffff;
+  --sem-support-error-low: #87090c;
+  --sem-support-on-error-low: #ffadaf;
+  --sem-support-warning: #be8800;
+  --sem-support-on-warning: #ffffff;
+  --sem-support-warning-low: #936901;
+  --sem-support-on-warning-low: #ffefb6;
+  --sem-support-success: #039409;
+  --sem-support-on-success: #ffffff;
+  --sem-support-success-low: #1c7d29;
+  --sem-support-on-success-low: #d2fad2;
+  --sem-support-info: #79a6ff;
+  --sem-support-on-info: #ffffff;
+  --sem-support-info-low: #193264;
+  --sem-support-on-info-low: #b2ccff;
+  --sem-support-disabled: #000000;
+  --sem-support-disabled-low: rgba(255, 255, 255, 0.1);
+  --sem-support-on-disabled-low: rgba(255, 255, 255, 0.1);
+  --sem-support-focus: #e7b400;
+  --sem-support-on-focus: #000000;
+
+  --sem-reactive-surface-hover: rgba(113, 120, 91, 0.1);
+  --sem-reactive-surface-pressed: rgba(113, 120, 91, 0.25);
+  --sem-reactive-accent-hover: rgba(60, 1, 38, 0.25);
+  --sem-reactive-accent-pressed: rgba(60, 1, 38, 0.5);
+  --sem-reactive-accent-active: rgba(201, 119, 159, 0.18);
+  --sem-reactive-inverse-hover: rgba(255, 255, 255, 0.15);
+  --sem-reactive-inverse-pressed: rgba(255, 255, 255, 0.25);
+
+  --sem-border-highest: #767777;
+  --sem-border-high: rgba(255, 255, 255, 0.25);
+  --sem-border-md: rgba(255, 255, 255, 0.15);
+  --sem-border-low: rgba(255, 255, 255, 0.1);
+  --sem-border-inverse-highest: #1b1c15;
+  --sem-border-inverse-md: rgba(255, 255, 255, 0.25);
+  --sem-border-inverse-low: rgba(255, 255, 255, 0.1);
+
+  --sem-bg-surface-emphasis: #422c0d;
+  --sem-bg-surface-high: #47473e;
+  --sem-bg-surface-md: #303129;
+  --sem-bg-surface-low: #26261e;
+  --sem-bg-base: #1b1c15;
+  --sem-bg-surface-inverse: #121f10;
+  --sem-bg-surface-inverse-md: #71785b;
+
+  --sem-accent-primary: #e791ba;
+  --sem-accent-on-primary: #57183c;
+  --sem-accent-primary-low: #57183c;
+  --sem-accent-on-primary-low: #ffecf2;
+  --sem-accent-secondary: #c3caa8;
+  --sem-accent-on-secondary: #181e08;
+  --sem-accent-secondary-low: #2d331b;
+  --sem-accent-on-secondary-low: #edf4d1;
+  --sem-accent-inverse: #f5f4f2;
+  --sem-accent-on-inverse: #3d4a39;
+  --sem-accent-neutral: rgba(113, 120, 91, 0.25);
+  --sem-accent-on-neutral: #f1f1f0;
+
+  --sem-content-emphasis: #bc9b73;
+  --sem-content-high: #f1f1f0;
+  --sem-content-low: #b8b9b9;
+  --sem-content-inverse: #ffffff;
+  --sem-content-inverse-low: #c6c6c6;
+
+  --background: var(--sem-bg-base);
+  --foreground: var(--sem-content-high);
+  --card: var(--sem-bg-base);
+  --card-foreground: var(--sem-content-high);
+  --popover: var(--sem-bg-base);
+  --popover-foreground: var(--sem-content-high);
+  --primary: var(--sem-accent-secondary);
+  --primary-foreground: var(--sem-accent-on-secondary);
+  --secondary: var(--sem-bg-surface-md);
+  --secondary-foreground: var(--sem-content-high);
+  --muted: var(--sem-bg-surface-low);
+  --muted-foreground: var(--sem-content-low);
+  --accent: var(--sem-content-emphasis);
+  --accent-foreground: var(--sem-content-inverse);
+  --destructive: var(--sem-accent-primary);
+  --destructive-foreground: var(--sem-accent-on-primary);
+  --border: var(--sem-border-low);
+  --input: var(--sem-border-md);
+  --ring: var(--sem-content-high);
+}
+
+/* Tema Alto Contraste */
+[data-theme='hc'] {
+  --sem-support-error: #87090c;
+  --sem-support-on-error: #ffffff;
+  --sem-support-error-low: #ffd6d7;
+  --sem-support-on-error-low: #87090c;
+  --sem-support-warning: #936901;
+  --sem-support-on-warning: #000000;
+  --sem-support-warning-low: #fad550;
+  --sem-support-on-warning-low: #936901;
+  --sem-support-success: #1c7d29;
+  --sem-support-on-success: #ffffff;
+  --sem-support-success-low: #a6f6a6;
+  --sem-support-on-success-low: #1c7d29;
+  --sem-support-info: #193264;
+  --sem-support-on-info: #ffffff;
+  --sem-support-info-low: #b2ccff;
+  --sem-support-on-info-low: #193264;
+  --sem-support-disabled: #c6c6c6;
+  --sem-support-disabled-low: #f1f1f0;
+  --sem-support-on-disabled-low: #c6c6c6;
+  --sem-support-focus: #e7b400;
+  --sem-support-on-focus: #000000;
+
+  --sem-reactive-surface-hover: rgba(113, 120, 91, 0.1);
+  --sem-reactive-surface-pressed: rgba(113, 120, 91, 0.25);
+  --sem-reactive-accent-hover: rgba(60, 1, 38, 0.25);
+  --sem-reactive-accent-pressed: rgba(60, 1, 38, 0.5);
+  --sem-reactive-accent-active: rgba(201, 119, 159, 0.18);
+  --sem-reactive-inverse-hover: rgba(255, 255, 255, 0.15);
+  --sem-reactive-inverse-pressed: rgba(255, 255, 255, 0.25);
+
+  --sem-border-highest: #2e3b2b;
+  --sem-border-high: #5f5f55;
+  --sem-border-md: #78786d;
+  --sem-border-low: #acaca0;
+  --sem-border-inverse-highest: #ffffff;
+  --sem-border-inverse-md: rgba(255, 255, 255, 0.25);
+  --sem-border-inverse-low: rgba(255, 255, 255, 0.25);
+
+  --sem-bg-surface-emphasis: #ffeedd;
+  --sem-bg-surface-high: #cbcabe;
+  --sem-bg-surface-md: #e4e3d6;
+  --sem-bg-surface-low: #ebeade;
+  --sem-bg-base: #ffffff;
+  --sem-bg-surface-inverse: #121f10;
+  --sem-bg-surface-inverse-md: #71785b;
+
+  --sem-accent-primary: #57183c;
+  --sem-accent-on-primary: #ffffff;
+  --sem-accent-primary-low: #ffecf2;
+  --sem-accent-on-primary-low: #773357;
+  --sem-accent-secondary: #434a30;
+  --sem-accent-on-secondary: #ffffff;
+  --sem-accent-secondary-low: #edf4d1;
+  --sem-accent-on-secondary-low: #181e08;
+  --sem-accent-inverse: #ffffff;
+  --sem-accent-on-inverse: #121f10;
+  --sem-accent-neutral: rgba(255, 255, 255, 0.75);
+  --sem-accent-on-neutral: #121f10;
+
+  --sem-content-emphasis: #755937;
+  --sem-content-high: #000000;
+  --sem-content-low: #2f3131;
+  --sem-content-inverse: #ffffff;
+  --sem-content-inverse-low: #e3e2e2;
+
+  --background: var(--sem-bg-base);
+  --foreground: var(--sem-content-high);
+  --card: var(--sem-bg-base);
+  --card-foreground: var(--sem-content-high);
+  --popover: var(--sem-bg-base);
+  --popover-foreground: var(--sem-content-high);
+  --primary: var(--sem-accent-secondary);
+  --primary-foreground: var(--sem-accent-on-secondary);
+  --secondary: var(--sem-bg-surface-md);
+  --secondary-foreground: var(--sem-content-high);
+  --muted: var(--sem-bg-surface-low);
+  --muted-foreground: var(--sem-content-low);
+  --accent: var(--sem-content-emphasis);
+  --accent-foreground: var(--sem-content-inverse);
+  --destructive: var(--sem-accent-primary);
+  --destructive-foreground: var(--sem-accent-on-primary);
+  --border: var(--sem-border-low);
+  --input: var(--sem-border-md);
+  --ring: var(--sem-content-high);
+}
+
+/* Tema Monocromático */
+[data-theme='mono'] {
+  --sem-support-error: #454747;
+  --sem-support-on-error: #ffffff;
+  --sem-support-error-low: #c6c6c6;
+  --sem-support-on-error-low: #1a1c1c;
+  --sem-support-warning: #454747;
+  --sem-support-on-warning: #000000;
+  --sem-support-warning-low: #c6c6c6;
+  --sem-support-on-warning-low: #1a1c1c;
+  --sem-support-success: #454747;
+  --sem-support-on-success: #ffffff;
+  --sem-support-success-low: #c6c6c6;
+  --sem-support-on-success-low: #1a1c1c;
+  --sem-support-info: #454747;
+  --sem-support-on-info: #ffffff;
+  --sem-support-info-low: #c6c6c6;
+  --sem-support-on-info-low: #1a1c1c;
+  --sem-support-disabled: #c6c6c6;
+  --sem-support-disabled-low: #f1f1f0;
+  --sem-support-on-disabled-low: #c6c6c6;
+  --sem-support-focus: #e7b400;
+  --sem-support-on-focus: #000000;
+
+  --sem-reactive-surface-hover: rgba(113, 120, 91, 0.1);
+  --sem-reactive-surface-pressed: rgba(113, 120, 91, 0.25);
+  --sem-reactive-accent-hover: rgba(60, 1, 38, 0.25);
+  --sem-reactive-accent-pressed: rgba(60, 1, 38, 0.5);
+  --sem-reactive-accent-active: rgba(201, 119, 159, 0.18);
+  --sem-reactive-inverse-hover: rgba(255, 255, 255, 0.15);
+  --sem-reactive-inverse-pressed: rgba(255, 255, 255, 0.25);
+
+  --sem-border-highest: #5d5e5f;
+  --sem-border-high: #ababab;
+  --sem-border-md: #c6c6c6;
+  --sem-border-low: #e3e2e2;
+  --sem-border-inverse-highest: #ffffff;
+  --sem-border-inverse-md: rgba(255, 255, 255, 0.25);
+  --sem-border-inverse-low: rgba(255, 255, 255, 0.1);
+
+  --sem-bg-surface-emphasis: #e3e2e2;
+  --sem-bg-surface-high: #c6c6c6;
+  --sem-bg-surface-md: #e3e2e2;
+  --sem-bg-surface-low: #f1f1f0;
+  --sem-bg-base: #ffffff;
+  --sem-bg-surface-inverse: #2f3131;
+  --sem-bg-surface-inverse-md: #454747;
+
+  --sem-accent-primary: #1a1c1c;
+  --sem-accent-on-primary: #ffffff;
+  --sem-accent-primary-low: #e3e2e2;
+  --sem-accent-on-primary-low: #1a1c1c;
+  --sem-accent-secondary: #5d5e5f;
+  --sem-accent-on-secondary: #ffffff;
+  --sem-accent-secondary-low: #e3e2e2;
+  --sem-accent-on-secondary-low: #1a1c1c;
+  --sem-accent-inverse: #ffffff;
+  --sem-accent-on-inverse: #454747;
+  --sem-accent-neutral: rgba(255, 255, 255, 0.25);
+  --sem-accent-on-neutral: #454747;
+
+  --sem-content-emphasis: #000000;
+  --sem-content-high: #2f3131;
+  --sem-content-low: #5d5e5f;
+  --sem-content-inverse: #ffffff;
+  --sem-content-inverse-low: #c6c6c6;
+
+  --background: var(--sem-bg-base);
+  --foreground: var(--sem-content-high);
+  --card: var(--sem-bg-base);
+  --card-foreground: var(--sem-content-high);
+  --popover: var(--sem-bg-base);
+  --popover-foreground: var(--sem-content-high);
+  --primary: var(--sem-accent-primary);
+  --primary-foreground: var(--sem-accent-on-primary);
+  --secondary: var(--sem-bg-surface-md);
+  --secondary-foreground: var(--sem-content-high);
+  --muted: var(--sem-bg-surface-low);
+  --muted-foreground: var(--sem-content-low);
+  --accent: var(--sem-content-emphasis);
+  --accent-foreground: var(--sem-content-inverse);
+  --destructive: var(--sem-accent-primary);
+  --destructive-foreground: var(--sem-accent-on-primary);
+  --border: var(--sem-border-low);
+  --input: var(--sem-border-md);
+  --ring: var(--sem-content-high);
+}
+
+/* ============================================================================
+  3) @theme inline — Exposición limpia para Tailwind
+   ============================================================================ */
 @theme inline {
-  --font-sans: "Twogether Sans", system-ui, sans-serif;
+  --font-sans: "Twogether Sans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Twogether Sans", ui-monospace, monospace;
-  --font-quetzalli: "Twogether Sans", system-ui, sans-serif;
+  --font-quetzalli: "Twogether Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -123,71 +629,83 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-bg-base: var(--sem-bg-base);
+  --color-bg-surface-low: var(--sem-bg-surface-low);
+  --color-bg-surface-md: var(--sem-bg-surface-md);
+  --color-bg-surface-high: var(--sem-bg-surface-high);
+  --color-bg-surface-emphasis: var(--sem-bg-surface-emphasis);
+  --color-bg-surface-inverse: var(--sem-bg-surface-inverse);
+  --color-bg-surface-inverse-md: var(--sem-bg-surface-inverse-md);
+
+  --color-content-emphasis: var(--sem-content-emphasis);
+  --color-content-high: var(--sem-content-high);
+  --color-content-low: var(--sem-content-low);
+  --color-content-inverse: var(--sem-content-inverse);
+  --color-content-inverse-low: var(--sem-content-inverse-low);
+
+  --color-accent-primary: var(--sem-accent-primary);
+  --color-accent-on-primary: var(--sem-accent-on-primary);
+  --color-accent-primary-low: var(--sem-accent-primary-low);
+  --color-accent-on-primary-low: var(--sem-accent-on-primary-low);
+  --color-accent-secondary: var(--sem-accent-secondary);
+  --color-accent-on-secondary: var(--sem-accent-on-secondary);
+  --color-accent-secondary-low: var(--sem-accent-secondary-low);
+  --color-accent-on-secondary-low: var(--sem-accent-on-secondary-low);
+
+  --color-border-low: var(--sem-border-low);
+  --color-border-md: var(--sem-border-md);
+  --color-border-high: var(--sem-border-high);
+  --color-border-highest: var(--sem-border-highest);
+  --color-border-inverse-md: var(--sem-border-inverse-md);
+  --color-border-inverse-low: var(--sem-border-inverse-low);
 }
 
+/* ============================================================================
+  4) REGLAS BASE SEGURAS (Evita alterar alineaciones de contenedores globales)
+   ============================================================================ */
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-family: var(--font-sans);
-    @apply bg-background text-foreground;
+    background-color: var(--background);
+    color: var(--foreground);
+    margin: 0;
   }
 }
 
-@layer utilities {
-  .container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+/* Tailwind v4 no centra automaticamente la utilidad `container`. */
+@utility container {
+  width: 100%;
+  margin-inline: auto;
+}
 
-  @media (min-width: 640px) {
-    .container {
-      max-width: 640px;
-    }
-  }
+/* Sonner toasts pointer events fix */
+[data-sonner-toaster] {
+  pointer-events: auto !important;
+}
 
-  @media (min-width: 768px) {
-    .container {
-      max-width: 768px;
-    }
-  }
+/* ── Clases de adaptabilidad para tarjetas y controles sin romper esquemas ── */
+.card,
+[data-slot="card"] {
+  background-color: var(--card);
+  color: var(--card-foreground);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
 
-  @media (min-width: 1024px) {
-    .container {
-      max-width: 1024px;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .container {
-      max-width: 1280px;
-    }
-  }
-
-  @media (min-width: 1536px) {
-    .container {
-      max-width: 1536px;
-    }
-  }
+.ds-input {
+  border-color: var(--sem-border-md);
+}
+.ds-input:focus:not(:disabled):not([aria-invalid='true']) {
+  border-color: var(--sem-content-high);
 }

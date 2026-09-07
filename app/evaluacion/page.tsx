@@ -112,7 +112,7 @@ export default function EvaluacionPage() {
               <div className="relative">
                 <div className="flex items-start justify-between gap-2 overflow-x-auto pb-4">
                   {evaluationTypes.map((type, index) => (
-                    <div key={type.name} className="flex flex-col items-center flex-shrink-0" style={{ width: "160px" }}>
+                    <div key={type.name} className="flex w-40 flex-shrink-0 flex-col items-center">
                       {/* Timeline dot */}
                       <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground flex-shrink-0 z-10 relative">
                         <span className="text-sm font-bold">{index + 1}</span>
@@ -132,7 +132,7 @@ export default function EvaluacionPage() {
                 </div>
                 
                 {/* Horizontal connecting line */}
-                <div className="absolute top-5 left-0 right-0 h-1 bg-primary/20 -z-10" style={{ height: "2px" }}></div>
+                <div className="absolute top-5 left-0 right-0 -z-10 h-0.5 bg-primary/20"></div>
               </div>
             </section>
 
