@@ -6,7 +6,7 @@ export function withBasePath(path: string): string {
   // Asegurar que el path no tenga doble slash
   const cleanPath = path.startsWith('/') ? path : `/${path}`;
   //return `${BASE_PATH}${cleanPath}`;
-    return '';
+    return '/';
 
 }
 
