@@ -76,10 +76,10 @@ export default function HomePage() {
             {/* 1. Bloque de texto con ancho optimizado y desplazado a la derecha */}
             <div className="relative z-30 w-full xl:w-7/12 xl:max-w-3xl ml-0 xl:ml-6 text-left">
               <h1 className="mb-4 text-3xl sm:text-4xl xl:text-6xl font-quetzalli tracking-tight text-balance text-content-inverse">
-                Morelos Planea 
+                Morelos con Gestión para Resultados 
               </h1>
               <p className="text-base sm:text-lg xl:text-xl text-balance font-medium text-content-inverse-low leading-relaxed">
-                Conoce, consulta y da seguimiento a la planeación, programación, presupuesto, seguimiento y evaluación de los programas públicos del Estado de Morelos.
+                Conoce, consulta y da seguimiento a la planeación, programación, presupuestación, seguimiento, evaluación y la rendición de cuentas de las políticas y programas públicos del Estado de Morelos.
               </p>
             </div>
 
