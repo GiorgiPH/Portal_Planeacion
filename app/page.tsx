@@ -97,7 +97,7 @@ export default function HomePage() {
             {/* 3. Contenedor del Isotipo al fondo dentro del Hero */}
             <div className="absolute right-0 top-0 bottom-0 h-full w-full sm:w-1/2 pointer-events-none flex justify-end overflow-hidden z-10">
               <img
-                src="/images/Isotipo.sv"
+                src="/images/Isotipo.svg"
                 alt="Isotipo"
                 className="h-full w-auto object-cover object-right opacity-25 xl:opacity-40"
               />
