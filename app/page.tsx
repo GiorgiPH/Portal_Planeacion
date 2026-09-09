@@ -12,12 +12,14 @@ const modules = [
     icon: BookOpen,
     href: "/planeacion",
   },
-  {
+  
+/* {
     title: "COPLADEMOR",
     description: "Comité de Planeación para el Desarrollo del Estado de Morelos",
     icon: Users,
     href: "/coplademor",
-  },
+  }, */
+  
   {
     title: "Presupuesto Participativo",
     description: "Consolidar la participación ciudadana en decisiones del poder público",

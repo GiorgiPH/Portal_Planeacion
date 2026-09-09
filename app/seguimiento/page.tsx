@@ -3,30 +3,20 @@ import { Footer } from "@/components/footer"
 import { BreadcrumbNav } from "@/components/breadcrumb-nav"
 import { NormativeLink } from "@/components/normative-link"
 import { CicloPresupuestario } from "@/components/ciclo-presupuestario"
-import { FileText, Clock, Database } from "lucide-react"
+import { FileText, Database } from "lucide-react"
 import { Card, CardHeader, CardTitle } from "@/components/ui/card"
 
 const navigationCards = [
   {
     title: "Reportes Trimestrales de PPs",
     icon: FileText,
-    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/V.%20SEGUIMIENTO%20A%20PROGRAMAS%20PRESUPUESTARIOS%20Y%20FONDO%20DEL%20RAMO%2033/2025/Avances%20Trimestrales%20Programas%20Presupuestarios_2025",
-  },
-  {
-    title: "Reportes Trimestrales de PPs (Históricos)",
-    icon: Clock,
-    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/VII.%20EVALUACIONES%20A%20PROGRAMAS%20PRESUPUESTARIOS",
+    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/V.%20SEGUIMIENTO%20A%20PROGRAMAS%20PRESUPUESTARIOS%20Y%20FONDO%20DEL%20RAMO%2033",
   },
   {
     title: "Reporte del Sistema de Recursos Federales Transferidos (SRFT - Módulo Indicadores)",
     icon: Database,
     href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Informaci%C3%B3n%20especifica%20de%20Transparencia/Informes%20Trimestrales%2C%20Reportados%20en%20el%20Sistema%20de%20Recursos%20Federales%20Transferidos%20%28SRFT%29",
   },
-  /*{
-    title: "Reporte del SRFT (Módulo Indicadores) Histórico",
-    icon: Clock,
-    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/VII.%20EVALUACIONES%20A%20PROGRAMAS%20PRESUPUESTARIOS",
-  },*/
 ]
 
 export default function SeguimientoPage() {
@@ -81,19 +71,21 @@ export default function SeguimientoPage() {
             {/* Reports */}
             <section>
               <h2 className="mb-6 text-2xl font-semibold">Reportes y Documentos</h2>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 justify-items-center max-w-5xl mx-auto">
-                {navigationCards.map((card) => (
-                  <a key={card.title} href={card.href} target="_blank" rel="noopener noreferrer" className="group w-full">
-                    <Card className="h-full cursor-pointer transition-all hover:shadow-lg hover:border-primary/50">
-                      <CardHeader>
-                        <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                          <card.icon className="h-6 w-6" />
-                        </div>
-                        <CardTitle className="text-sm text-balance">{card.title}</CardTitle>
-                      </CardHeader>
-                    </Card>
-                  </a>
-                ))}
+              <div className="flex justify-start">
+                <div className="grid gap-4 sm:grid-cols-2 max-w-4xl w-full">
+                  {navigationCards.map((card) => (
+                    <a key={card.title} href={card.href} target="_blank" rel="noopener noreferrer" className="group w-full">
+                      <Card className="h-full cursor-pointer transition-all hover:shadow-lg hover:border-primary/50">
+                        <CardHeader>
+                          <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                            <card.icon className="h-6 w-6" />
+                          </div>
+                          <CardTitle className="text-sm text-balance">{card.title}</CardTitle>
+                        </CardHeader>
+                      </Card>
+                    </a>
+                  ))}
+                </div>
               </div>
             </section>
           </div>

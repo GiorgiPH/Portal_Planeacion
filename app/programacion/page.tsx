@@ -19,7 +19,7 @@ const navigationCards = [
     href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/I.%20METODOLOGIAS%20%20GpR",
   },
   {
-    title: "Presupuesto de Egresos",
+    title: "Presupuestación",
     icon: FileText,
     href: "http://marcojuridico.morelos.gob.mx/archivos/decretos_legislativo/pdf/PEGRESOSEDOMOR2025.pdf",
   },

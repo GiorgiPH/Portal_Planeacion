@@ -2,7 +2,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { BreadcrumbNav } from "@/components/breadcrumb-nav"
 import { NormativeLink } from "@/components/normative-link"
-import { BarChart, Database } from "lucide-react"
+import { BarChart, Database, Users } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function InformacionEstrategicaPage() {
@@ -15,9 +15,12 @@ return (
         <BreadcrumbNav items={[{ label: "Planeación" }]} />
 
         <div className="space-y-12">
-            {/* Title */}
+            {/* Title & Introduction */}
             <section>
             <h1 className="mb-6 text-4xl font-bold tracking-tight">Planeación</h1>
+            <p className="text-lg leading-relaxed text-muted-foreground">
+                La planeación es la etapa fundamental del ciclo presupuestario en México donde se establecen los objetivos, metas y prioridades para la asignación de recursos públicos.  Su propósito es garantizar que el gasto público esté alineado con la visión de desarrollo del país, siendo el principal instrumento rector el Plan Nacional de Desarrollo (PND)
+            </p>
             </section>
 
             {/* Normative Framework */}
@@ -42,7 +45,7 @@ return (
             {/* Statistical Information */}
             <section>
             <h2 className="mb-6 text-2xl font-semibold">Órganos Colegiados</h2>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 <a href="https://www.morelos.gob.mx/ceieg" target="_blank" rel="noopener noreferrer" className="group">
                 <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50">
                     <CardHeader>
@@ -75,6 +78,22 @@ return (
                     <CardContent>
                     <p className="text-sm text-muted-foreground leading-relaxed">
                         Consejo Estatal de Población de Morelos
+                    </p>
+                    </CardContent>
+                </Card>
+                </a>
+
+                <a href="/coplademor" className="group">
+                <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50">
+                    <CardHeader>
+                    <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                        <Users className="h-6 w-6" />
+                    </div>
+                    <CardTitle>COPLADEMOR</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                        Comité de Planeación para el Desarrollo del Estado de Morelos
                     </p>
                     </CardContent>
                 </Card>

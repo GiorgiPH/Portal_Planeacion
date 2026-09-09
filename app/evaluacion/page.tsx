@@ -46,6 +46,11 @@ const navigationCards = [
     icon: FileText,
     href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/IX.-%20T%C3%89RMINOS%20DE%20REFERENCIA",
   },
+    {
+    title: "Instrumentos Metodológicos",
+    icon: FileText,
+    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/I.%20METODOLOGIAS%20%20GpR/Instrumentos%20Metodol%C3%B3gicos",
+  },
 ]
 
 export default function EvaluacionPage() {
