@@ -3,9 +3,15 @@ import { Footer } from "@/components/footer"
 import { ModuleCard } from "@/components/module-card"
 import { withBasePath } from "@/lib/config"
 import Image from "next/image"
-import { Users, Wallet, Info, Target, Calendar, LineChart, ClipboardCheck, FileCheck, Building } from "lucide-react"
+import { Users, Wallet, Info, Target, Calendar, LineChart, ClipboardCheck, FileCheck, Building, BookOpen } from "lucide-react"
 
 const modules = [
+  {
+    title: "Planeación",
+    description: "1era etapa del ciclo de gestión para resultados, donde se definen objetivos, estrategias y metas",
+    icon: BookOpen,
+    href: "/planeacion",
+  },
   {
     title: "COPLADEMOR",
     description: "Comité de Planeación para el Desarrollo del Estado de Morelos",
@@ -18,18 +24,21 @@ const modules = [
     icon: Wallet,
     href: "/presupuesto-participativo",
   },
-  {
+
+/* {
     title: "Información Estratégica",
     description: "Marco normativo e información estadística del estado",
     icon: Info,
     href: "/informacion-estrategica",
-  },
-  {
+  }, */
+
+/* {}  {
     title: "Gestión para Resultados",
     description: "Enfoque en lograr resultados que mejoren la vida de la comunidad",
     icon: Target,
     href: "/gestion-para-resultados",
-  },
+  }, */
+  
   {
     title: "Programación",
     description: "Definición de programas presupuestarios, actividades y metas",

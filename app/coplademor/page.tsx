@@ -37,6 +37,11 @@ const navigationCards = [
     icon: ClipboardCheck,
     href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/IV.%20EVALUACION%20DEL%20PLAN%20ESTATAL%20DE%20DESARROLLO",
   },
+  {
+    title: "Instrumentos metodológicos",
+    icon: BookOpen,
+    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/IV.%20EVALUACION%20DEL%20PLAN%20ESTATAL%20DE%20DESARROLLO",
+  },
 ]
 
 /*const municipalities = [
