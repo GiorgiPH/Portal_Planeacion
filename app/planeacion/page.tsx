@@ -11,10 +11,10 @@ return (
     <Header />
 
     <main className="flex-1">
-        <div className="container py-8">
+        <div className="container py-8 md:py-10 lg:py-12 xl:py-16">
         <BreadcrumbNav items={[{ label: "Planeación" }]} />
 
-        <div className="space-y-12">
+        <div className="space-y-8 md:space-y-10 lg:space-y-12">
             {/* Title & Introduction */}
             <section>
             <h1 className="mb-6 text-4xl font-bold tracking-tight">Planeación</h1>
@@ -45,9 +45,9 @@ return (
             {/* Statistical Information */}
             <section>
             <h2 className="mb-6 text-2xl font-semibold">Órganos Colegiados</h2>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
                 <a href="https://www.morelos.gob.mx/ceieg" target="_blank" rel="noopener noreferrer" className="group">
-                <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50">
+                <Card className="h-full flex flex-col justify-between transition-all hover:shadow-lg hover:border-primary/50">
                     <CardHeader>
                     <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                         <BarChart className="h-6 w-6" />

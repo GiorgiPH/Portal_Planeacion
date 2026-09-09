@@ -82,7 +82,7 @@ export default function HomePage() {
         {/* Hero Section */}
         <section className="relative overflow-hidden rounded-b-3xl lg:rounded-b-[2.5rem] bg-[#1E2B1C] shadow-xl w-full">
           {/* Contenedor principal */}
-          <div className="relative w-full min-h-[450px] xl:min-h-[551px] flex items-center justify-between px-6 sm:px-10 xl:px-16 py-16 xl:py-24">
+          <div className="relative w-full min-h-[450px] xl:min-h-[551px] flex items-center justify-between px-6 sm:px-10 md:px-12 lg:px-14 xl:px-16 py-16 xl:py-24 max-w-7xl mx-auto">
             
             {/* 1. Bloque de texto con ancho optimizado y desplazado a la derecha */}
             <div className="relative z-30 w-full xl:w-7/12 xl:max-w-3xl ml-0 xl:ml-6 text-left">
@@ -119,7 +119,7 @@ export default function HomePage() {
 
         {/* Grid de Módulos */}
         <section className="container py-12 md:py-16 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
             {modules.map((module) => (
               <ModuleCard key={module.href} {...module} />
             ))}

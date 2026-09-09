@@ -61,10 +61,9 @@ export default function CoplademorPage() {
       <Header />
 
       <main className="flex-1">
-        <div className="container py-8">
-          <BreadcrumbNav items={[{ label: "COPLADEMOR" }]} />
+        <div className="container py-8 md:py-10 lg:py-12 xl:py-16">
 
-          <div className="space-y-12">
+          <div className="space-y-8 md:space-y-10 lg:space-y-12">
             {/* Introduction */}
             <section>
               <h1 className="mb-6 text-4xl font-bold tracking-tight text-balance">
@@ -100,10 +99,10 @@ export default function CoplademorPage() {
             {/* Navigation Cards */}
             <section>
               <h2 className="mb-6 text-2xl font-semibold">Recursos y Documentos</h2>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
                 {navigationCards.map((card) => (
                   <a key={card.title} href={card.href} target="_blank" rel="noopener noreferrer" className="group">
-                    <Card className="h-full cursor-pointer transition-all hover:shadow-lg hover:border-primary/50">
+                    <Card className="h-full flex flex-col justify-between cursor-pointer transition-all hover:shadow-lg hover:border-primary/50">
                       <CardHeader>
                         <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                           <card.icon className="h-6 w-6" />

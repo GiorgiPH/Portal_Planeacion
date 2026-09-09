@@ -11,6 +11,21 @@ theme: {
       fontFamily: {
         quetzalli: ['Twogether Sans', 'sans-serif'],
       },
+      screens: {
+        'laptop': '1366px',
+      },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem',
+          sm: '1.5rem',
+          lg: '2rem',
+          xl: '4rem',
+        },
+        screens: {
+          '2xl': '1400px',
+        },
+      },
     },
 },
 plugins: [],

@@ -8,7 +8,7 @@ import { withBasePath } from "@/lib/config"
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white shadow-sm">
-      <div className="w-full flex h-24 items-center justify-between px-3 sm:px-6 lg:px-10">
+      <div className="w-full flex h-24 items-center justify-between px-3 sm:px-6 md:px-8 lg:px-10 xl:px-14">
         
         {/* Lado Izquierdo: Logotipos institucionales pegados al borde */}
         <Link href="/" className="flex items-center gap-5 transition-opacity hover:opacity-80">
