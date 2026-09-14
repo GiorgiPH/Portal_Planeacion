@@ -12,12 +12,41 @@ const modules = [
     icon: BookOpen,
     href: "/planeacion",
   },
+  
+  /* 
+  {
+    title: "COPLADEMOR",
+    description: "Comité de Planeación para el Desarrollo del Estado de Morelos",
+    icon: Users,
+    href: "/coplademor",
+  }, 
+  */
+  
   {
     title: "Presupuesto Participativo",
     description: "Consolidar la participación ciudadana en decisiones del poder público",
     icon: Wallet,
     href: "/presupuesto-participativo",
   },
+
+  /* 
+  {
+    title: "Información Estratégica",
+    description: "Marco normativo e información estadística del estado",
+    icon: Info,
+    href: "/informacion-estrategica",
+  }, 
+  */
+
+  /* 
+  {
+    title: "Gestión para Resultados",
+    description: "Enfoque en lograr resultados que mejoren la vida de la comunidad",
+    icon: Target,
+    href: "/gestion-para-resultados",
+  }, 
+  */
+  
   {
     title: "Programación",
     description: "Definición de programas presupuestarios, actividades y metas",
@@ -41,7 +70,7 @@ const modules = [
     description: "Dar cuentas del ejercicio de los recursos públicos",
     icon: FileCheck,
     href: "/rendicion-de-cuentas",
-    },
+  },
   {
     title: "CCSEDE",
     description: "Comisión Coordinadora del Sistema de Evaluación del Desempeño Estatal",
@@ -71,7 +100,18 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* 2. Contenedor del Isotipo expandido desde el borde izquierdo hasta abarcar todo el fondo */}
+            {/* 2. Imagen de Preview comentada */}
+            {/*
+            <div className="hidden xl:flex absolute right-28 top-1/2 -translate-y-1/2 z-25 w-7/12 justify-end items-center pointer-events-none">
+              <img
+                src="/images/rgb_planeacion.jpeg"
+                alt="Portal Planeación Preview"
+                className="w-full max-w-2xl h-auto object-contain drop-shadow-2xl"
+              />
+            </div>
+            */}
+
+            {/* 3. Contenedor del Isotipo expandido desde el borde izquierdo hasta abarcar todo el fondo */}
             <div className="absolute inset-0 pointer-events-none flex justify-end overflow-hidden z-10">
               <img
                 src={withBasePath("/images/Isotipo.svg")}
