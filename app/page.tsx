@@ -21,6 +21,13 @@ const modules = [
     href: "/coplademor",
   }, 
   */
+
+  {
+    title: "Programación",
+    description: "Definición de programas presupuestarios, actividades y metas",
+    icon: Calendar,
+    href: "/programacion",
+  },  
   
   {
     title: "Presupuesto Participativo",
@@ -48,12 +55,6 @@ const modules = [
   */
   
   {
-    title: "Programación",
-    description: "Definición de programas presupuestarios, actividades y metas",
-    icon: Calendar,
-    href: "/programacion",
-  },
-  {
     title: "Seguimiento",
     description: "Verificación del desempeño y seguimiento de indicadores",
     icon: LineChart,
@@ -71,12 +72,13 @@ const modules = [
     icon: FileCheck,
     href: "/rendicion-de-cuentas",
   },
-  {
+  /*{
     title: "CCSEDE",
     description: "Comisión Coordinadora del Sistema de Evaluación del Desempeño Estatal",
     icon: Building,
     href: "/ccsede",
   },
+  */
 ]
 
 export default function HomePage() {

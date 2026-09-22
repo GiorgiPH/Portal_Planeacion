@@ -3,7 +3,7 @@ import { Footer } from "@/components/footer"
 import { BreadcrumbNav } from "@/components/breadcrumb-nav"
 import { NormativeLink } from "@/components/normative-link"
 import { CicloPresupuestario } from "@/components/ciclo-presupuestario"
-import { Calendar, FileText, ExternalLink, Target, AlertCircle, CheckCircle } from "lucide-react"
+import { Calendar, FileText, ExternalLink, Target, AlertCircle, CheckCircle, Building } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
@@ -50,6 +50,12 @@ const navigationCards = [
     title: "Instrumentos Metodológicos",
     icon: FileText,
     href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/PBR%20-%20SED/I.%20METODOLOGIAS%20%20GpR/Instrumentos%20Metodol%C3%B3gicos",
+  },
+    {
+    title: "CCSEDE",
+    description: "Comisión Coordinadora del Sistema de Evaluación del Desempeño Estatal",
+    icon: Building,
+    href: "/ccsede",
   },
 ]
 
