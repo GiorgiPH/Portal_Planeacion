@@ -2,7 +2,8 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { BreadcrumbNav } from "@/components/breadcrumb-nav"
 import { NormativeLink } from "@/components/normative-link"
-import { BarChart, Database, Users } from "lucide-react"
+import { CicloPresupuestario } from "@/components/ciclo-presupuestario"
+import { BarChart, Database, Users, Wallet } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function InformacionEstrategicaPage() {
@@ -18,9 +19,12 @@ return (
             {/* Title & Introduction */}
             <section>
             <h1 className="mb-6 text-4xl font-bold tracking-tight">Planeación</h1>
-            <p className="text-lg leading-relaxed text-muted-foreground">
-                La planeación es la etapa fundamental del ciclo presupuestario en México donde se establecen los objetivos, metas y prioridades para la asignación de recursos públicos.  Su propósito es garantizar que el gasto público esté alineado con la visión de desarrollo del país, siendo el principal instrumento rector el Plan Nacional de Desarrollo (PND)
-            </p>
+            <div className="space-y-4">
+                <p className="text-lg leading-relaxed text-muted-foreground">
+                    La planeación es la etapa fundamental del ciclo presupuestario en México donde se establecen los objetivos, metas y prioridades para la asignación de recursos públicos.  Su propósito es garantizar que el gasto público esté alineado con la visión de desarrollo del país, siendo el principal instrumento rector el Plan Nacional de Desarrollo (PND)
+                </p>
+                <CicloPresupuestario highlightStage="planeacion" />
+            </div>
             </section>
 
             {/* Normative Framework */}
@@ -42,6 +46,25 @@ return (
             </div>
             </section>
 
+            {/* Participatory Budget */}
+            <section>
+            <a href="/presupuesto-participativo" className="group">
+                <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50">
+                <CardHeader>
+                    <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                    <Wallet className="h-6 w-6" />
+                    </div>
+                    <CardTitle>Presupuesto Participativo</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    Consolidar la participación ciudadana en decisiones del poder público
+                    </p>
+                </CardContent>
+                </Card>
+            </a>
+            </section>
+
             {/* Statistical Information */}
             <section>
             <h2 className="mb-6 text-2xl font-semibold">Órganos Colegiados</h2>
@@ -56,7 +79,7 @@ return (
                     </CardHeader>
                     <CardContent>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                        Comisión Estatal de Información Estadística y Geográfica de Morelos
+                        Comité Estatal de Información Estadística y Geográfica de Morelos
                     </p>
                     </CardContent>
                 </Card>

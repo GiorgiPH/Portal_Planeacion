@@ -29,11 +29,20 @@ const modules = [
     href: "/programacion",
   },  
   
+  /*
   {
     title: "Presupuesto Participativo",
     description: "Consolidar la participación ciudadana en decisiones del poder público",
     icon: Wallet,
     href: "/presupuesto-participativo",
+  },
+  */
+
+  {
+    title: "Presupuestación",
+    description: "Asignación de recursos públicos a programas y actividades para cumplir objetivos y metas",
+    icon: Wallet,
+    href: "/presupuestacion",
   },
 
   /* 

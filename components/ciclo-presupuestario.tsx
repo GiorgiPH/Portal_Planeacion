@@ -12,7 +12,7 @@ interface CicloPresupuestarioProps {
 const stagePositions: Record<Stage, { left: string; label: string }> = {
   planeacion: { left: "11%", label: "Planeación" },
   programacion: { left: "26%", label: "Programación" },
-  presupuestacion: { left: "35%", label: "Presupuestación" },
+  presupuestacion: { left: "40.90%", label: "Presupuestación" },
   ejercicio: { left: "50%", label: "Ejercicio y Control" },
   seguimiento: { left: "68%", label: "Seguimiento" },
   evaluacion: { left: "82%", label: "Evaluación" },
