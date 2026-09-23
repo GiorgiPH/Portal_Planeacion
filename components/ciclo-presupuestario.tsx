@@ -15,7 +15,7 @@ const stagePositions: Record<Stage, { left: string; label: string }> = {
   presupuestacion: { left: "40.90%", label: "Presupuestación" },
   ejercicio: { left: "50%", label: "Ejercicio y Control" },
   seguimiento: { left: "68%", label: "Seguimiento" },
-  evaluacion: { left: "82%", label: "Evaluación" },
+  evaluacion: { left: "82.50%", label: "Evaluación" },
   rendicion: { left: "99%", label: "Rendición de Cuentas" },
 }
 

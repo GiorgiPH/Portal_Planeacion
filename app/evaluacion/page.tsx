@@ -1,11 +1,11 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { BreadcrumbNav } from "@/components/breadcrumb-nav"
 import { NormativeLink } from "@/components/normative-link"
 import { CicloPresupuestario } from "@/components/ciclo-presupuestario"
 import { Calendar, FileText, ExternalLink, Target, AlertCircle, CheckCircle, Building } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { BreadcrumbNav } from "@/components/breadcrumb-nav"
 
 const evaluationTypes = [
   { name: "Diseño", description: "Analiza la consistencia de los elementos que componen la política pública o programa presupuestario" },
@@ -66,6 +66,7 @@ export default function EvaluacionPage() {
 
       <main className="flex-1">
         <div className="container py-8 md:py-10 lg:py-12 xl:py-16">
+          <BreadcrumbNav items={[{ label: "Evaluación" }]} />
 
           <div className="space-y-8 md:space-y-10 lg:space-y-12">
             {/* Introduction */}
