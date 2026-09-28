@@ -10,7 +10,7 @@ const navigationCards = [
 {
     title: "Presupuestación",
     icon: FileText,
-    href: "https://periodico.morelos.gob.mx/obtenerPDF/2025/6502.pdf",
+    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Informaci%C3%B3n%20especifica%20de%20Transparencia/Indice%20de%20Transparencia%20y%20Disponibilidad%20de%20la%20Informaci%C3%B3n%20Fiscal%20-%20ITDIF/III.%20MARCO%20PROGRAMATICO%20PRESUPUESTAL/Presupuesto%20de%20Egresos",
 },
 ]
 
