@@ -35,7 +35,7 @@ const navigationCards = [
   {
     title: "Actas de Sesiones",
     icon: Scroll,
-    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Comisi%C3%B3n%20Coordinadora%20del%20Sistema%20de%20Evaluaci%C3%B3n%20del%20Desempe%C3%B1o%20Estatal%20%28CCSEDE%29",
+    href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Informaci%C3%B3n%20especifica%20de%20Transparencia/Comisi%C3%B3n%20Coordinadora%20del%20Sistema%20de%20Evaluaci%C3%B3n%20del%20Desempe%C3%B1o%20Estatal%20%28CCSEDE%29",
   },
   /*{
     title: "Acuerdos",
