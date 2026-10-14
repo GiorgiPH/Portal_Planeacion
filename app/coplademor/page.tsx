@@ -23,7 +23,7 @@ const navigationCards = [
     href: "https://transparencia.morelos.gob.mx/index.php/s/wTm6A83BCa9dmbC?dir=/Planeaci%C3%B3n%20Estrat%C3%A9gica/IX.%20PLANES%20MUNICIPALES%20PUBLICADOS%202025-2027",
   },
   {
-    title: "Comité de Planeación para el Desarrollo del Estado de Morelos (COPLADEMOR) Subcomités Sectoriales",
+    title: "Subcomités Sectoriales (COPLADEMOR)",
     icon: Users,
     href: "#",
   },
