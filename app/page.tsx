@@ -267,7 +267,7 @@ export default function HomePage() {
         {/* Hero Section */}
         <section id="hero" className="relative scroll-mt-28 overflow-hidden rounded-b-3xl bg-[#1E2B1C] shadow-xl w-full lg:rounded-b-[2.5rem]">
           {/* Contenedor principal que abarca todo el ancho */}
-          <div className="relative w-full min-h-[450px] xl:min-h-[551px] flex items-center px-6 sm:px-12 md:px-16 lg:px-20 xl:px-28 py-16 xl:py-24">
+          <div className="relative flex min-h-[340px] w-full items-center px-4 py-12 sm:min-h-[450px] sm:px-12 sm:py-16 md:px-16 lg:px-20 xl:min-h-[551px] xl:px-28 xl:py-24">
             
             {/* 1. Bloque de texto alineado hacia la izquierda con más espacio */}
             <div className="relative z-30 w-full xl:w-7/12 max-w-4xl text-left">
@@ -295,7 +295,7 @@ export default function HomePage() {
               <img
                 src={withBasePath("/images/Isotipo.svg")}
                 alt="Isotipo"
-                className="h-full w-auto max-w-none object-cover object-right opacity-30 xl:opacity-45 scale-125 translate-x-12"
+                className="h-4/5 w-auto max-w-none translate-x-8 scale-110 object-cover object-right opacity-15 sm:h-full sm:translate-x-12 sm:scale-125 sm:opacity-30 xl:opacity-45"
               />
             </div>
 

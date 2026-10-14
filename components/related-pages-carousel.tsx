@@ -51,13 +51,13 @@ export function RelatedPagesCarousel({ pages }: RelatedPagesCarouselProps) {
                 className="group block h-full rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1E2B1C]"
               >
                 <Card className="h-full overflow-hidden transition-all group-hover:-translate-y-1 group-hover:border-primary/50 group-hover:shadow-lg">
-                  <div className="flex h-40 items-center justify-center bg-white p-8">
+                  <div className="flex h-28 items-center justify-center bg-white p-4 sm:h-40 sm:p-8">
                     <Image
                       src={withBasePath(page.image)}
                       alt={page.imageAlt}
                       width={240}
                       height={64}
-                      className="h-auto max-h-16 w-auto max-w-full object-contain"
+                      className="h-auto max-h-10 w-auto max-w-full object-contain sm:max-h-16"
                     />
                   </div>
                   <CardContent className="flex min-h-32 flex-col border-t border-gray-100 p-5">
@@ -76,14 +76,14 @@ export function RelatedPagesCarousel({ pages }: RelatedPagesCarouselProps) {
         </CarouselContent>
         <CarouselPrevious
           aria-label="Mostrar página anterior"
-          className="left-[-2.5rem] top-1/2 z-10 size-10 -translate-y-1/2 bg-white shadow-md sm:left-[-3rem]"
+          className="hidden left-[-2.5rem] top-1/2 z-10 size-10 -translate-y-1/2 bg-white shadow-md sm:flex sm:left-[-3rem]"
         >
           <ArrowLeft aria-hidden="true" />
           <span className="sr-only">Anterior</span>
         </CarouselPrevious>
         <CarouselNext
           aria-label="Mostrar página siguiente"
-          className="right-[-2.5rem] top-1/2 z-10 size-10 -translate-y-1/2 bg-white shadow-md sm:right-[-3rem]"
+          className="hidden right-[-2.5rem] top-1/2 z-10 size-10 -translate-y-1/2 bg-white shadow-md sm:flex sm:right-[-3rem]"
         >
           <ArrowRight aria-hidden="true" />
           <span className="sr-only">Siguiente</span>
